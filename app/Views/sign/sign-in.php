@@ -11,7 +11,7 @@
     <div class="container">
         <div class="wraper">
             <div class="image--container" style="background: url(<?= base_url(
-                                                                        'assets/img/productivity.jpg'
+                                                                        'img/logomota.jpg'
                                                                     ) ?>); background-position:center; background-size:cover;"></div>
             <div class="login-container__main">
                 <div class="login-container__title">login</div>
