@@ -49,6 +49,12 @@ $routes->post('/menu/update/(:segment)', 'Menu::update/$1');
 $routes->post('/menu/save', 'Menu::save');
 $routes->get('/menu/delete/(:num)', 'Menu::delete/$1');
 
+// routes for stok bahan baku
+$routes->get('/admin/stok-bahan', 'StokBahan::index');
+$routes->get('/admin/stok-bahan/create', 'StokBahan::create');
+$routes->post('/admin/stok-bahan/save', 'StokBahan::save');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
