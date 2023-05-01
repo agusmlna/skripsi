@@ -54,6 +54,10 @@ $routes->get('/admin/stok-bahan', 'StokBahan::index');
 $routes->get('/admin/stok-bahan/create', 'StokBahan::create');
 $routes->post('/admin/stok-bahan/save', 'StokBahan::save');
 
+// routes coba order
+$routes->get('/coba-order', 'Order::index');
+$routes->get('/coba-order/save/(:any)', 'Order::save/$1');
+
 
 /*
  * --------------------------------------------------------------------

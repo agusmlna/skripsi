@@ -14,6 +14,7 @@ class MenuModel extends Model
         'harga',
         'sampul',
         'tipe',
+        'recipe',
         'created_at'
     ];
 
