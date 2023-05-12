@@ -31,7 +31,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Pages::index');
+$routes->get('/', 'SignController::index');
 // route for sign in
 $routes->get('admin/login', 'SignController::index');
 
@@ -58,6 +58,9 @@ $routes->post('/admin/stok-bahan/save', 'StokBahan::save');
 $routes->get('/coba-order', 'Order::index');
 $routes->get('/coba-order/save/(:any)', 'Order::save/$1');
 
+// routes halaman user
+$routes->get('/home', 'home::index');
+$routes->get('home/pesan-produk', 'Produk::index');
 
 /*
  * --------------------------------------------------------------------

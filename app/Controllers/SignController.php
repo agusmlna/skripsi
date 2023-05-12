@@ -45,7 +45,7 @@ class SignController extends BaseController
                     'kedai' => $kedaiModel->where('id_kedai', $data['id_kedai'])->first(),
                 ];
                 session()->set($ses_data);
-                return redirect()->to('/menu');
+                return redirect()->to('/admin/menu');
             } else {
                 session()->setFlashdata('pesan', 'Login Gagal');
                 return redirect()->to('/login');
@@ -84,7 +84,7 @@ class SignController extends BaseController
         $kedai = $query->getResult();
         $data = [
             'kedai' => $kedai,
-            'title' => 'Register | Coffee Land'
+            'title' => 'Register | MotaMorph '
         ];
         return view('admin/sign/sign-up', $data);
     }

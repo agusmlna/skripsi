@@ -6,12 +6,10 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
-    }
-
-
-    public function coba()
-    {
-        echo "Hello World";
+        $data =     [
+            'title' => 'Home | MOTAMORPH COFFEE',
+            'tes' => ['satu,dua,tiga']
+        ];
+        echo view('home/home', $data);
     }
 }
