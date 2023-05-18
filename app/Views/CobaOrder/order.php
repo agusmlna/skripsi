@@ -41,6 +41,10 @@ if (session()->getFlashData('danger')) {
       <p>
         <?= $m['menu']; ?>
       </p>
+      <td><img src="/img/<?= $m['sampul']; ?>" alt="" class="sampul"></td>
+      <p>
+        <?= $m['harga']; ?>
+      </p>
       <p>RESEP</p>
 
       <!-- START FOREACH RECIPES JSON -->
