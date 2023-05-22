@@ -15,7 +15,7 @@
                         <a class="nav-link" href="/home/pesan-produk">Pesan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">Portfolio</a>
+                        <a class="nav-link" href="/home/reservasi">Reservasi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!">Reference</a>
