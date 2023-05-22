@@ -117,3 +117,6 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+.input-group-append {
+  cursor: pointer;
+}

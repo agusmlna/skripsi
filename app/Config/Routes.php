@@ -61,6 +61,7 @@ $routes->get('/coba-order/save/(:any)', 'Order::save/$1');
 // routes halaman user
 $routes->get('/home', 'home::index');
 $routes->get('home/pesan-produk', 'Produk::index');
+$routes->get('home/reservasi', 'Booking::index');
 
 /*
  * --------------------------------------------------------------------
