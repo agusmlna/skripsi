@@ -40,10 +40,10 @@
                     </select>
                 </div>
                 <section class="container">
-                    <h2 class="py-2">Datepicker in Bootstrap 5</h2>
+                    <h2 class="py-2">Pilih Tanggal</h2>
                     <form class="row">
                         <label for="date" class="col-1 col-form-label">Date</label>
-                        <div class="col-5">
+                        <div class="col-5 pb-3">
                             <div class="input-group date" id="datepicker">
                                 <input type="text" class="form-control" id="date" />
                                 <span class="input-group-append">
@@ -55,10 +55,48 @@
                         </div>
                     </form>
                 </section>
-            </form>
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Data Reservasi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5 class="">Nama Lengkap : </h5>
+                                <p>Agus Maulana</p>
+                                <h5 class="">Email : </h5>
+                                <p>bassram71@gmail.com</p>
+                                <h5 class="">No Telpon : </h5>
+                                <p>087861869173</p>
+                                <h5 class="">Pilih Meja : </h5>
+                                <p>Six</p>
+                                <h5 class="">Tanggal : </h5>
+                                <p>29/05/2023</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Apakah data diatas sudah benar ?
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Benar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
         <div class="col-6">
-
+            <img src="/img/reservasi.png" alt="" width="600x">
         </div>
     </div>
 </div>
