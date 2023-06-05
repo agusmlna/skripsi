@@ -11,25 +11,25 @@
             <form class="row g-3">
                 <div class="col-md-6">
                     <label for="inputText4" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="inputText4">
+                    <input type="text" class="form-control" id="inputNamaDepan">
                     <div id="textHelp" class="form-text">Nama depan</div>
                 </div>
                 <div class="col-md-6">
                     <label for="inputText4" class="form-label">-</label>
-                    <input type="text" class="form-control" id="inputText4">
+                    <input type="text" class="form-control" id="inputNamaBelakang">
                     <div id="textHelp" class="form-text">Nama belakang</div>
                 </div>
                 <div class="col-12">
                     <label for="inputEmail" class="form-label">Email</label>
-                    <input type="Email" class="form-control" id="inputAddress">
+                    <input type="Email" class="form-control" id="inputEmail">
                 </div>
                 <div class="col-12">
                     <label for="inputText4" class="form-label">No Telpon</label>
-                    <input type="text" class="form-control" id="inputText4">
+                    <input type="text" class="form-control" id="inputTelpon">
                 </div>
                 <div class="col-md-6">
                     <label for="inputCity" class="form-label">Pilih Meja</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select id="inputMeja" class="form-select" aria-label="Default select example">
                         <option selected>Silahkan Pilih Meja</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -45,7 +45,7 @@
                         <label for="date" class="col-1 col-form-label">Date</label>
                         <div class="col-5 pb-3">
                             <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control" id="date" />
+                                <input type="text" class="form-control" id="inputTanggal" />
                                 <span class="input-group-append">
                                     <span class="input-group-text bg-light d-block">
                                         <i class="fa fa-calendar"></i>
@@ -57,7 +57,7 @@
                 </section>
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Launch demo modal
                 </button>
 
@@ -71,15 +71,18 @@
                             </div>
                             <div class="modal-body">
                                 <h5 class="">Nama Lengkap : </h5>
-                                <p>Agus Maulana</p>
+                                <p>
+                                    <span class="nama-depan">agus</span>
+                                    <span class="nama-belakang">agus</span>
+                                </p>
                                 <h5 class="">Email : </h5>
-                                <p>bassram71@gmail.com</p>
+                                <p class="modal-email">bassram71@gmail.com</p>
                                 <h5 class="">No Telpon : </h5>
-                                <p>087861869173</p>
+                                <p class="modal-telpon">087861869173</p>
                                 <h5 class="">Pilih Meja : </h5>
-                                <p>Six</p>
-                                <h5 class="">Tanggal : </h5>
-                                <p>29/05/2023</p>
+                                <p class="modal-meja">Six</p>
+                                <h5>Tanggal : </h5>
+                                <p class="modal-tanggal">29/05/2023</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">
