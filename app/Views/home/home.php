@@ -106,21 +106,36 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <h1>IMAGE GALLERY</h1>
-        <div class="col">
-            <div class="image-container">
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-                <div class="image"><img src="img/liyue_1.png" alt=""></div>
-            </div>
-        </div>
+<div class="container pt-5">
+
+    <h1 class="text-center fw-bold">IMAGE GALLERY</h1>
+    <div class="image-container">
+        <div class="image"><img src="img/liyue_1.png" alt=""></div>
+        <div class="image"><img src="img/liyue_2.png" alt=""></div>
+        <div class="image"><img src="img/liyue_3.png" alt=""></div>
+        <div class="image"><img src="img/liyue_4.png" alt=""></div>
+        <div class="image"><img src="img/liyue_5.png" alt=""></div>
+        <div class="image"><img src="img/liyue_6.png" alt=""></div>
+    </div>
+
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="img/liyue_1.png" alt="">
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('.image-container img').forEach(image => {
+        image.onclick = () => {
+            document.querySelector('.popup-image').style.display = 'block';
+            document.querySelector('.popup-image img').src = image.getAttribute('src');
+        }
+    });
+
+    document.querySelector('popup-image span').onclick = () => {
+        document.querySelector('.popup-image').style.display = 'none';
+    }
+</script>
 
 <div class="container">
     <div class="row py-5">

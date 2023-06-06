@@ -53,6 +53,8 @@ $routes->get('/menu/delete/(:num)', 'Menu::delete/$1');
 $routes->get('/admin/stok-bahan', 'StokBahan::index');
 $routes->get('/admin/stok-bahan/create', 'StokBahan::create');
 $routes->post('/admin/stok-bahan/save', 'StokBahan::save');
+$routes->get('/admin/stok-bahan/detail/(:any)', 'StokBahan::detail/$1');
+$routes->post('/admin/stok-bahan/update/(:segment)', 'StokBahan::update/$1');
 
 // routes coba order
 $routes->get('/coba-order', 'Order::index');
@@ -65,6 +67,8 @@ $routes->get('home/pesan-produk', 'Produk::index');
 $routes->get('home/pesan-produk/buy/(:any)', 'Produk::buy/$1');
 
 $routes->get('home/reservasi', 'Booking::index');
+$routes->get('home/promo', 'Promo::index');
+
 
 /*
  * --------------------------------------------------------------------

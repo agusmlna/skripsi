@@ -1,13 +1,13 @@
 <header>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top mask-custom shadow-0">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top mask-custom shadow-0">
         <div class="container">
-            <a class="navbar-brand" href="#!"><span style="color: #5e9693;">Psycho</span><span style="color: #fff;">logist</span></a>
+            <a class="navbar-brand" href="#!"><span style="color: #5e9693;">Mota</span><span style="color: #fff;">morph</span></a>
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav justify-content-end">
+                <ul class="nav justify-content-end">
                     <li class="nav-item">
                         <a class="nav-link" href="/home">Home</a>
                     </li>
@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/home/reservasi">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">Reference</a>
+                        <a class="nav-link" href="/home/promo">Promo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!">About</a>

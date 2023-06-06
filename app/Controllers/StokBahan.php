@@ -22,6 +22,15 @@ class StokBahan extends BaseController
     return view('StokBahan/index', $data);
   }
 
+  public function detail($stokBahan)
+  {
+    $data = [
+      'title' => 'Detail Bahan Baku',
+      'stokBahan' => $this->stokBahanModel->getStokBahan($stokBahan),
+    ];
+    return view('StokBahan/detail', $data);
+  }
+
   public function create()
   {
     $data = [

@@ -28,7 +28,7 @@
               <td><?= $s['name']; ?></td>
               <td><?= $s['quantity']; ?></td>
               <td>
-                <a href="admin/stok-bahan/detail/<?= $s['name']; ?>" class="btn btn-success">Detail</a>
+                <a href="/admin/stok-bahan/detail/<?= $s['name']; ?>" class="btn btn-success">Detail</a>
               </td>
             </tr>
           <?php endforeach; ?>
