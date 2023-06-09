@@ -8,44 +8,45 @@
         <div class="col-6">
             <h3>Pesan Meja</h3>
             <p>Lengkapi data-data di bawah ini</p>
-            <form class="row g-3">
+            <form action="/home/reservasi/save" method="post" enctype="multipart/form-data" class="row g-3">
                 <div class="col-md-6">
-                    <label for="inputText4" class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" id="inputNamaDepan">
+                    <label for="nama_depan_pemesan" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="inputNamaDepan" name="nama_depan_pemesan">
                     <div id="textHelp" class="form-text">Nama depan</div>
                 </div>
                 <div class="col-md-6">
-                    <label for="inputText4" class="form-label">-</label>
-                    <input type="text" class="form-control" id="inputNamaBelakang">
+                    <label for="nama_belakang_pemesan" class="form-label">-</label>
+                    <input type="text" class="form-control" id="inputNamaBelakang" name="nama_belakang_pemesan">
                     <div id="textHelp" class="form-text">Nama belakang</div>
                 </div>
                 <div class="col-12">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="Email" class="form-control" id="inputEmail">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="Email" class="form-control" id="inputEmail" name="email">
                 </div>
                 <div class="col-12">
-                    <label for="inputText4" class="form-label">No Telpon</label>
-                    <input type="text" class="form-control" id="inputTelpon">
+                    <label for="no_telpon" class="form-label">No Telpon</label>
+                    <input type="text" class="form-control" id="inputTelpon" name="no_telpon">
                 </div>
                 <div class="col-md-6">
-                    <label for="inputCity" class="form-label">Pilih Meja</label>
+                    <label for="meja" class="form-label">Pilih Meja</label>
                     <select id="inputMeja" class="form-select" aria-label="Default select example">
                         <option selected>Silahkan Pilih Meja</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
-                        <option value="6">Six</option>
+                        <option value="one">One</option>
+                        <option value="two">Two</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <option value="five">Five</option>
+                        <option value="six">Six</option>
                     </select>
+                    <input type='hidden' id='meja' name="meja" value='' />
                 </div>
                 <section class="container">
                     <h2 class="py-2">Pilih Tanggal</h2>
-                    <form class="row">
-                        <label for="date" class="col-1 col-form-label">Date</label>
+                    <div class="row">
+                        <label for="tanggal" class="col-1 col-form-label">Date</label>
                         <div class="col-5 pb-3">
                             <div class="input-group date" id="datepicker">
-                                <input type="text" class="form-control" id="inputTanggal" />
+                                <input type="text" class="form-control" id="inputTanggal" name="tanggal" />
                                 <span class="input-group-append">
                                     <span class="input-group-text bg-light d-block">
                                         <i class="fa fa-calendar"></i>
@@ -53,7 +54,7 @@
                                 </span>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </section>
 
                 <!-- Button trigger modal -->
@@ -92,11 +93,14 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Benar</button>
+                                <button type="submit" class="btn btn-primary">Benar</button>
+
                             </div>
                         </div>
                     </div>
                 </div>
+
+            </form>
         </div>
         <div class="col-6">
             <img src="/img/reservasi.png" alt="" width="600x">

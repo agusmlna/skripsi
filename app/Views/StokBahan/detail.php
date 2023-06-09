@@ -12,7 +12,7 @@
                             <h5 class="card-title"><?= $stokBahan['name']; ?></h5>
                             <p class="card-text"><b>Stok : </b><?= $stokBahan['quantity']; ?></p>
 
-                            <a href="admin/stok-bahan/edit/<?= $stokBahan['name']; ?>" class="btn btn-warning">Edit</a>
+                            <a href="/admin/stok-bahan/edit/<?= $stokBahan['name']; ?>" class="btn btn-warning">Edit</a>
 
 
                             <form action="admin/stok-bahan/delete/<?= $stokBahan['id']; ?>" method="delete" class="d-inline">

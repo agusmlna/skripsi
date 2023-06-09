@@ -9,7 +9,7 @@
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="<?= base_url('/'); ?>">Home</a>
                 <a class="nav-link" href="<?= base_url('/pages/about'); ?>">About</a>
-                <a class="nav-link" href="/pages/contact">Contact</a>
+                <a class="nav-link" href="/admin/reservasi">Reservasi</a>
                 <a class="nav-link" href="/admin/menu">Menu</a>
                 <a class="nav-link" href="/admin/stok-bahan">stok bahan</a>
                 <a class="nav-link" href="/coba-order">coba order</a>

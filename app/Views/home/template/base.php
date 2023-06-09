@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" crossorigin="anonymous"></script>
     <script src="/js/produk.js"></script>
     <script src="/js/reservasi.js"></script>
-
+    <script src="/js/interaksiTransaksiProduct.js"></script>
 
 </body>
 

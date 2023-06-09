@@ -14,7 +14,7 @@
                 </div>
             <?php endif; ?>
 
-            <form action="admin/stok-bahan/update/<?= $stokBahan['name']; ?>" method="post">
+            <form action="/admin/stok-bahan/update/<?= $stokBahan['id']; ?>" method="post">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="stokBahan" value="<?= $stokBahan['id']; ?>">
                 <div class="row mb-3">
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="harga" class="col-sm-2 col-form-label">Stok</label>
+                    <label for="quantity" class="col-sm-2 col-form-label">Stok</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="quantity" name="quantity" value="<?= $stokBahan['quantity']; ?>">
                     </div>

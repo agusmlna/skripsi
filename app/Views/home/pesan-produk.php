@@ -41,15 +41,35 @@
                         <label for="exampleFormControlInput1" class="form-label">Email address</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama">
                     </div>
-                    <div class="mb-3 pesanan">
-                        <!-- <div class="row">
-                            <div class="col">
-                                <h3 class="text-dark name"></h3>
-                            </div>
-                            <div class="col">
-                                <p class="text-dark price">rp.</p>
-                            </div>
-                        </div> -->
+                    <div class="d-flex flex-xl-nowrap flex-wrap">
+                        <table class="fs-5 mb-xl-5 mb-3" style="width: 100%;">
+                            <tr>
+                                <td class="text-secondary" style="width: 30%;">Kuantitas</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="text-secondary">:&nbsp;</span>
+                                        <button onclick="decQuantity();" type="button" class="btn btn-dark fs-4 nopadding bi bi-dash-square-fill" id="action-min"></button>
+                                        <span class="mx-2" id="quantity-product">1</span>
+                                        <button onclick="incQuantity();" type="button" class="btn fs-4 nopadding bi bi-plus-square-fill cai-color-text" id="action-plus"></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-secondary">Harga Satuan</td>
+                                <td>
+                                    <span class="text-secondary">:</span>
+                                    <span id="harga-satuan">Rp.30.000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="fw-bold text-secondary">Total Harga</td>
+                                <td class="fw-bold">
+                                    <span class="text-secondary">:</span>
+                                    <span id="total-harga">Rp.26.000</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -64,62 +84,12 @@
                 <hr>
 
                 <div class="row justify-content-center pt-3">
-                    <div class="col">
-                        <h3 class="text-dark text-center">Payment Method</h3>
-                    </div>
-                    <div class="row justify-content-between">
-                        <div class="col ps-5 ms-5">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                BCA
-                            </button>
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="btnradio1"><img class="fit-image" src="https://i.imgur.com/5TqiRQV.jpg" width="105px" height="55px"></label>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <h1 class="py-4 text-dark">NO REK : 1043394746</h1>
-                                            <div class="mb-5 text-dark">
-                                                <label for="formFile" class="form-label">Masukan Bukti Pembayaran</label>
-                                                <input class="form-control" type="file" id="formFile">
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col ps-2">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Cash
-                            </button>
-
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Bayar Di Tempat Alamat : Jalan Warakas 4 Gang 3 No 52 </p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
                     </div>
                 </div>
 

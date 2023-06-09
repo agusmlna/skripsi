@@ -26,5 +26,10 @@ document.querySelector('.btn-confirm').addEventListener('click', function() {
   modalTelpon.textContent = inputTelpon;
   modalMeja.textContent = inputMeja;
   modalTanggal.textContent = inputTanggal;
+
+  let meja = document.querySelector('#meja');
+
+  meja.value = inputMeja;
+
 });
 

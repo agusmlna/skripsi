@@ -52,4 +52,29 @@ class StokBahan extends BaseController
 
     return redirect()->to('admin/stok-bahan');
   }
+
+  public function edit($stokBahan)
+  {
+
+    $data = [
+      'title' => 'Form Ubah Data Stok Bahan',
+      'validation' => \Config\Services::validation(),
+      'stokBahan' => $this->stokBahanModel->getStokBahan($stokBahan)
+    ];
+
+    return view('StokBahan/edit', $data);
+  }
+
+  public function update($id)
+  {
+    $this->stokBahanModel->save([
+      'id' => $id,
+      'name' => $this->request->getVar('name'),
+      'quantity' => $this->request->getVar('quantity')
+    ]);
+
+    session()->setFlashdata('pesan', 'Data Berhasil diubah.');
+
+    return redirect()->to('admin/stok-bahan');
+  }
 }
