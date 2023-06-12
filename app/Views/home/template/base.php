@@ -23,6 +23,7 @@
     <script src="/js/produk.js"></script>
     <script src="/js/reservasi.js"></script>
     <script src="/js/interaksiTransaksiProduct.js"></script>
+    <script src="/js/rating.js"></script>
 
 </body>
 

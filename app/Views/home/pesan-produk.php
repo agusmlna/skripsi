@@ -41,35 +41,19 @@
                         <label for="exampleFormControlInput1" class="form-label">Email address</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan Nama">
                     </div>
-                    <div class="d-flex flex-xl-nowrap flex-wrap">
-                        <table class="fs-5 mb-xl-5 mb-3" style="width: 100%;">
-                            <tr>
-                                <td class="text-secondary" style="width: 30%;">Kuantitas</td>
-                                <td>
-                                    <div class="d-flex align-items-center">
-                                        <span class="text-secondary">:&nbsp;</span>
-                                        <button onclick="decQuantity();" type="button" class="btn btn-dark fs-4 nopadding bi bi-dash-square-fill" id="action-min"></button>
-                                        <span class="mx-2" id="quantity-product">1</span>
-                                        <button onclick="incQuantity();" type="button" class="btn fs-4 nopadding bi bi-plus-square-fill cai-color-text" id="action-plus"></button>
-                                    </div>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="text-secondary">Harga Satuan</td>
-                                <td>
-                                    <span class="text-secondary">:</span>
-                                    <span id="harga-satuan">Rp.30.000</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold text-secondary">Total Harga</td>
-                                <td class="fw-bold">
-                                    <span class="text-secondary">:</span>
-                                    <span id="total-harga">Rp.26.000</span>
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="d-flex flex-xl-nowrap flex-wrap text-dark">
+                        <div>
+                            <img class="rounded-4 me-3" src="/img/motasuren.jpg" width="50" alt="">
+                        </div>
+                        <div>
+                            <h5 class="fw-bold nopadding">Anna Sukatarno</h5>
+                            <p class="fs-5 text-dark ">Rp. 15000</p>
+                            <p class="text-dark">
+                                <i class="fa-solid fa-square-minus fa-lg" style="color: #000000;"></i>
+                                4
+                                <i class="fa-solid fa-square-plus fa-lg" style="color: #000000;"></i>
+                            </p>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">

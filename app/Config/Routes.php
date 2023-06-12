@@ -60,6 +60,9 @@ $routes->post('/admin/stok-bahan/update/(:segment)', 'StokBahan::update/$1');
 // routes reservasi
 $routes->get('/admin/reservasi', 'Reservasi::index');
 
+// routes Order
+$routes->get('/admin/order', 'Order2::index');
+
 // routes coba order
 $routes->get('/coba-order', 'Order::index');
 $routes->get('/coba-order/save/(:any)', 'Order::save/$1');
@@ -72,7 +75,11 @@ $routes->get('home/pesan-produk/buy/(:any)', 'Produk::buy/$1');
 
 $routes->get('home/reservasi', 'Booking::index');
 $routes->post('/home/reservasi/save', 'Reservasi::save');
+
 $routes->get('home/promo', 'Promo::index');
+
+$routes->get('home/rating', 'Rating::index');
+
 
 
 /*
