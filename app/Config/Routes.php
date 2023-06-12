@@ -70,6 +70,7 @@ $routes->get('/coba-order/save/(:any)', 'Order::save/$1');
 // routes halaman user
 $routes->get('/home', 'home::index');
 $routes->get('home/pesan-produk', 'Produk::index');
+$routes->post('/home/pesan-produk/save', 'Order2::save');
 
 $routes->get('home/pesan-produk/buy/(:any)', 'Produk::buy/$1');
 

@@ -15,24 +15,31 @@ class Order2 extends BaseController
     {
         $data = [
             'title' => 'Daftar Order',
-            // 'order' => $this->orderModel->getOrder()
+            'orders' => $this->orderModel->getOrders()
         ];
-
 
         return view('Order/index', $data);
     }
 
-    // public function save()
-    // {
-    //     $date = strtotime($this->request->getVar('tanggal'));
-    //     $this->orderModel->save([
-    //         'nama_pemesan' => "{$this->request->getVar('nama_depan_pemesan')} {$this->request->getVar('nama_belakang_pemesan')}",
-    //         'email' => $this->request->getVar('email'),
-    //         'no_telpon' => $this->request->getVar('no_telpon'),
-    //         'no_meja' => $this->request->getVar('meja'),
-    //         'tanggal' => date('Y/m/d H:i:s', $date)
-    //     ]);
+    public function save()
+    {
+        if ($this->request->getVar('CustomerName') == "") {
+            session()->setFlashdata('pesan', 'Nama Kosong');
+        } else if (
+            $this->request->getVar('menuOrder') == "" ||
+            $this->request->getVar('menuOrder') == []
+        ) {
+            session()->setFlashdata('pesan', 'order Kosong');
+        } else {
+            $this->orderModel->save([
+                'customer_name' => $this->request->getVar('CustomerName'),
+                'order_menu' => $this->request->getVar('menuOrder'),
+                'total' => $this->request->getVar('total'),
+                'type_payment' => $this->request->getVar('type-payment'),
+                'order_date' => date('Y/m/d H:i:s'),
+            ]);
+        }
 
-    //     return redirect()->to('home/reservasi');
-    // }
+        return redirect()->to('home/pesan-produk');
+    }
 }

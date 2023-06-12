@@ -7,23 +7,23 @@ use CodeIgniter\Model;
 class OrderModel extends Model
 {
 
-    // protected $table = 'Reservasi';
-    // protected $useTimestamps = false;
-    // protected $allowedFields = [
-    //     'nama_pemesan',
-    //     'email',
-    //     'no_telpon',
-    //     'no_meja',
-    //     'tanggal',
-    //     'created_at'
-    // ];
+    protected $table = 'orders';
+    protected $useTimestamps = false;
+    protected $allowedFields = [
+        'customer_name',
+        'order_menu',
+        'no_telpon',
+        'total',
+        'type_payment',
+        'order_date'
+    ];
 
-    // public function getReservasi($reservasi = false)
-    // {
-    //     if ($reservasi == false) {
-    //         return $this->findAll();
-    //     }
+    public function getOrders($orders = false)
+    {
+        if ($orders == false) {
+            return $this->findAll();
+        }
 
-    //     return $this->where(['Reservasi' => $reservasi])->first();
-    // }
+        return $this->where(['orders' => $orders])->first();
+    }
 }

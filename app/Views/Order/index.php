@@ -19,19 +19,39 @@
                         <th scope="col">Quantity</th>
                         <th scope="col">Harga / Produk</th>
                         <th scope="col">Harga Total</th>
+                        <th scope="col">Tipe Pembayaran</th>
                         <th scope="col">Tanggal</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Agus Maulana</td>
-                        <td>Mota Suren , Matcha Milk</td>
-                        <td>3 Item</td>
-                        <td>Rp. 15000 , Rp 17000</td>
-                        <td>Rp. 32000</td>
-                        <td>11/06/2023</td>
-                    </tr>
+                    <?php $i = 1; ?>
+                    <?php foreach ($orders as $o) : ?>
+                        <tr>
+                            <th scope="row"><?= $i++; ?></th>
+                            <td><?= $o['customer_name']; ?></td>
+                            <td>
+                                <?php foreach (json_decode($o['order_menu']) as $m) : ?>
+                                    <?= $m->menu; ?>
+                                    <br>
+                                <?php endforeach; ?>
+                            </td>
+                            <td>
+                                <?php foreach (json_decode($o['order_menu']) as $m) : ?>
+                                    <?= $m->quantity; ?>
+                                    <br>
+                                <?php endforeach; ?>
+                            </td>
+                            <td>
+                                <?php foreach (json_decode($o['order_menu']) as $m) : ?>
+                                    <?= $m->price; ?>
+                                    <br>
+                                <?php endforeach; ?>
+                            </td>
+                            <td><?= $o['total']; ?></td>
+                            <td><?= $o['type_payment']; ?></td>
+                            <td><?= $o['order_date']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
