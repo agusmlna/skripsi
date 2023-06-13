@@ -18,12 +18,12 @@ class RatingModel extends Model
         'created_at'
     ];
 
-    public function getReservasi($reservasi = false)
+    public function getRating($rating = false)
     {
-        if ($reservasi == false) {
+        if ($rating == false) {
             return $this->findAll();
         }
 
-        return $this->where(['Reservasi' => $reservasi])->first();
+        return $this->where(['Rating' => $rating])->first();
     }
 }
