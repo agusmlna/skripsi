@@ -23,6 +23,7 @@ class Order extends BaseController
             'menu' => $menu,
         ];
 
+
         return view('cobaOrder/order', $data);
     }
 

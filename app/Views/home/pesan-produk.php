@@ -86,5 +86,9 @@
     </div>
 </div>
 
+<div class="d-none stok-bahan">
+    <?= json_encode($stokBahan); ?>
+</div>
+
 
 <?= $this->endSection(); ?>

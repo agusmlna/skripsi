@@ -14,6 +14,10 @@ let inputTotal = document.querySelector(".input-total");
 let quantity2 = document.querySelector(".quantity-product");
 let buttonDec = document.querySelector(".button-dec");
 
+// stok bahan
+let stokBahan = document.querySelector(".stok-bahan").textContent;
+console.log(JSON.parse(stokBahan));
+
 function pushTemplateSideItemMenu(dataMenu) {
   dataPesananHTML.push(`
         <div class="d-flex flex-xl-nowrap flex-wrap text-dark">
