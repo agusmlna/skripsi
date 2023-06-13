@@ -103,7 +103,7 @@
             </form>
         </div>
         <div class="col-6">
-            <img src="/img/reservasi.png" alt="" width="600x">
+            <img src="/img/reservasi.png" alt="" width="600px">
         </div>
     </div>
 </div>
