@@ -113,27 +113,27 @@
                 <h4 class="modal-title text-dark">Write your Review</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-
-            <!-- Modal body -->
-            <div class="modal-body text-center">
-                <h4>
-                    <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_1' data-rating='1'></i>
-                    <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_2' data-rating='2'></i>
-                    <i class="fa fa-star star-light submit_star   mr-1 " id='submit_star_3' data-rating='3'></i>
-                    <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_4' data-rating='4'></i>
-                    <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_5' data-rating='5'></i>
-                </h4>
-                <div class="form-group">
-                    <input type="text" class="form-control" id='userName' name='userName' placeholder="Enter Name">
+            <form action="/home/rating/save" method="post">
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <h4>
+                        <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_1' data-rating='1'></i>
+                        <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_2' data-rating='2'></i>
+                        <i class="fa fa-star star-light submit_star   mr-1 " id='submit_star_3' data-rating='3'></i>
+                        <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_4' data-rating='4'></i>
+                        <i class="fa fa-star star-light submit_star  mr-1 " id='submit_star_5' data-rating='5'></i>
+                    </h4>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id='userName' name='name' placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="pesan" id="userMessage" class="form-control" placeholder="Enter message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-primary" id='sendReview'>Submit</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <textarea name="userMessage" id="userMessage" class="form-control" placeholder="Enter message"></textarea>
-                </div>
-                <div class="form-group">
-                    <button class="btn-primary" id='sendReview'>Submit</button>
-                </div>
-            </div>
-
+            </form>
         </div>
     </div>
 </div>

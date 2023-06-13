@@ -80,6 +80,7 @@ $routes->post('/home/reservasi/save', 'Reservasi::save');
 $routes->get('home/promo', 'Promo::index');
 
 $routes->get('home/rating', 'Rating::index');
+$routes->post('home/rating/save', 'Rating::save');
 
 
 

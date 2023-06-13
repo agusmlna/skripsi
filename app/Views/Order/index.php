@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="my-1"> Daftar Data Reservasi</h1>
+            <h1 class="my-1"> Daftar Data Pesanan</h1>
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>
