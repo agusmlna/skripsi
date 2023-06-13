@@ -10,12 +10,11 @@ class RatingModel extends Model
     protected $table = 'Rating';
     protected $useTimestamps = false;
     protected $allowedFields = [
-        'id_rating',
+        'id_review  ',
         'name',
         'rating',
         'pesan',
         'tanggal',
-        'created_at'
     ];
 
     public function getRating($rating = false)
