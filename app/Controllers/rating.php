@@ -22,10 +22,12 @@ class Rating extends BaseController
 
     public function save()
     {
+
         $this->ratingModel->save([
             'name' => $this->request->getVar('name'),
             'rating' => $this->request->getVar('rating'),
-            'pesan' => $this->request->getVar('pesan')
+            'pesan' => $this->request->getVar('pesan'),
+            'tanggal' => date('Y/m/d H:i:s')
         ]);
 
         session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
