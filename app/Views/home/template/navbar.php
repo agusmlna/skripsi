@@ -24,27 +24,22 @@
                         <a class="nav-link" href="/home/rating">Rating</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#!">Team</a>
+                        <a class="nav-link" href="/home/detailtransaksi">Detail Transaksi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!">Contact</a>
                     </li>
-                </ul>
-                <ul class="navbar-nav d-flex flex-row">
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="#!">
-                            <i class="fas fa-shopping-cart"></i>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user" style="color: #000000;"></i>
+                            Hallo, Agus
                         </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="#!">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="#!">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/login">Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

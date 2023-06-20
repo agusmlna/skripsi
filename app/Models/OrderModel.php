@@ -26,4 +26,9 @@ class OrderModel extends Model
 
         return $this->where(['orders' => $orders])->first();
     }
+
+    public function getOrdersbyid($id_user)
+    {
+        return $this->where(['id_user' => $id_user])->findAll();
+    }
 }

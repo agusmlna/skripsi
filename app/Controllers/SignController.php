@@ -13,10 +13,7 @@ class SignController extends BaseController
     public function index()
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT * FROM kedai");
-        $kedai = $query->getResult();
         $data = [
-            'kedai' => $kedai,
             'title' => 'Login | Motamorph Coffee'
         ];
         return view('sign/sign-in', $data);
@@ -32,20 +29,29 @@ class SignController extends BaseController
         $password = $this->request->getVar('password');
         $data = $userModel->where('email', $email)->first();
 
+        function loginSuccessUser($data)
+        {
+            $ses_data = [
+                'iduser' => $data['id_user'],
+            ];
+            session()->set($ses_data);
+        }
+
+        function loginSuccessAdmin($data)
+        {
+            $ses_data = [
+                'idadmin' => $data['id_admin'],
+                'email' => $data['email'],
+            ];
+            session()->set($ses_data);
+        }
         //check if email exist
         if ($data) {
             //check if password is correct
             $pass = $data['password'];
-            $verify_pass = password_verify($password, $pass);
-            if ($verify_pass || $password == $pass) {
-                $kedaiModel = new KedaiModel();
-                $ses_data = [
-                    'iduser' => $data['id_user'],
-                    'idkedai' => $data['id_kedai'],
-                    'kedai' => $kedaiModel->where('id_kedai', $data['id_kedai'])->first(),
-                ];
-                session()->set($ses_data);
-                return redirect()->to('/admin/menu');
+            if ($password == $pass) {
+                loginSuccessUser($data);
+                return redirect()->to('home');
             } else {
                 session()->setFlashdata('pesan', 'Login Gagal');
                 return redirect()->to('/login');
@@ -55,14 +61,10 @@ class SignController extends BaseController
             $data = $adminModel->where('email', $email)->first();
             if ($data) {
                 $pass = $data['PASSWORD'];
-                $verify_pass = password_verify($password, $pass);
-                if ($verify_pass || $password == $pass) {
-                    $ses_data = [
-                        'idadmin' => $data['ID_ADMIN'],
-                        'email' => $data['email'],
-                    ];
-                    session()->set($ses_data);
-                    return redirect()->to('/pages');
+                if ($password == $pass) {
+                    // dd('sucess');
+                    loginSuccessAdmin($data);
+                    return redirect()->to('/admin/menu');
                 } else {
                     session()->setFlashdata('pesan', 'Login Gagal');
                     return redirect()->to('/login');
@@ -76,22 +78,18 @@ class SignController extends BaseController
 
 
 
-    //menampilkan halaman sign up
+    // menampilkan halaman sign up
     public function regist()
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT * FROM kedai");
-        $kedai = $query->getResult();
         $data = [
-            'kedai' => $kedai,
             'title' => 'Register | MotaMorph '
         ];
-        return view('admin/sign/sign-up', $data);
+        return view('sign/sign-up', $data);
     }
 
     public function processRegist()
     {
-        $kedaiModel = new KedaiModel();
         $userModel = new UserModel();
         // check if email already exist
         $checkemail = $userModel->where('email', $this->request->getVar('email'))->first();
@@ -102,29 +100,12 @@ class SignController extends BaseController
         }
         // insert data kedai to Kedai table
         //// make slug and check if slug already exist
-        $slug = url_title($this->request->getVar('name'), '-', true);
-        if ($kedaiModel->where('slug', $slug)->first()) {
-            $slug = $slug . '-' . time();
-        }
-        //set data kedai
-        $datakedai = [
-            'NAMA_KEDAI' => $this->request->getVar('name'),
-            'slug' => $slug,
-        ];
-        //insert kedai
-        $kedaiModel->insert($datakedai);
-
-        // get id kedai
-        $kedai = $kedaiModel->where('slug', $slug)->orWhere('NAMA_KEDAI', $this->request->getVar('name'))->first();
-
-        //set data user
-        //// hash password with
-        $password = password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
 
         $datauser = [
-            'id_kedai' => intval($kedai['ID_KEDAI']),
+            'username' => $this->request->getVar('username'),
             'email' => $this->request->getVar('email'),
-            'password' => $password
+            'no_telpon' => $this->request->getVar('no_telpon'),
+            'password' => $this->request->getVar('password')
         ];
         // insert data user to User table
         $userModel->insert($datauser);

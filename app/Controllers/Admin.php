@@ -4,11 +4,11 @@ namespace App\Controllers;
 
 class Admin extends BaseController
 {
-    public function login()
+    public function index()
     {
         $data =     [
             'title' => 'LOGIN'
         ];
-        return view('pages/adminlogin', $data);
+        return view('admin/dashboard', $data);
     }
 }

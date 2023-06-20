@@ -94,30 +94,34 @@
 
 
     <div class="px-xl-4 px-2">
-        <hr>
         <h2 class="fw-bold text-center">Ulasan</h2>
-        <div class="d-flex">
-            <div>
-                <div class="container pe-4">
-                    <div class="row border border-3 rounded-5 px-2 py-2">
-                        <h1>A</h1>
+        <hr>
+        <?php foreach ($rating as $r) : ?>
+            <div class="d-flex">
+                <div>
+                    <div class="container pe-4">
+                        <div class="row border border-3 rounded-5 px-2 py-2">
+                            <h1>A</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <h6 class="fw-bold nopadding">Agus Maulana</h6>
-                <div class="d-flex fs-6" style="color: #FFB813;">
-                    <i class="fa-solid fa-star" style="color: #f3d853;"></i>
-                    <i class="fa-solid fa-star" style="color: #f3d853;"></i>
-                    <i class="fa-solid fa-star" style="color: #f3d853;"></i>
-                    <i class="fa-solid fa-star" style="color: #f3d853;"></i>
-                    <i class="fa-solid fa-star" style="color: #f3d853;"></i>
-                    <span class="text-secondary ps-2">6 hari lalu</span>
+                <div>
+                    <h6 class="fw-bold nopadding"><?= $r['name']; ?></h6>
+                    <div class="d-flex fs-6" style="color: #FFB813;">
+                        <?php for ($i = 0; $i < 5; $i++) : ?>
+                            <?php if ($i < $r['rating']) : ?>
+                                <i class="fa-solid fa-star" style="color: #f3d853;"></i>
+                            <?php else : ?>
+                                <i class="fa-regular fa-star" style="color: #f3d853;"></i>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                        <span class="text-secondary ps-2"><?= date('d/M/Y', strtotime($r['tanggal'])); ?></span>
+                    </div>
+                    <p class="fs-5"><?= $r['pesan']; ?></p>
                 </div>
-                <p class="fs-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati culpa, placeat et suscipit porro doloribus maxime assumenda ipsam pariatur repudiandae eius fugit, sit aperiam ipsa distinctio provident dignissimos dolorem beatae!</p>
             </div>
-        </div>
-        <hr>
+            <hr>
+        <?php endforeach; ?>
 
     </div>
 </div>

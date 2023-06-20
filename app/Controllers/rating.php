@@ -15,10 +15,14 @@ class Rating extends BaseController
     {
         $data =     [
             'title' => 'Home | MOTAMORPH COFFEE',
-            'tes' => ['satu,dua,tiga']
+            'tes' => ['satu,dua,tiga'],
+            'rating' => $this->ratingModel->getRating(),
+
         ];
         echo view('home/rating', $data);
     }
+
+
 
     public function save()
     {

@@ -4,7 +4,7 @@
 }
 
 body {
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -68,6 +68,12 @@ body {
 .login-form__input-password input {
     display: block;
 }
+
+.login-form__input-notelpon label,
+.login-form__input-notelpon input {
+    display: block;
+}
+
 
 .login-form__input-email label,
 .login-form__input-password label {
