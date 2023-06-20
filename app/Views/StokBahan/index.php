@@ -17,6 +17,7 @@
             <th scope="col">No</th>
             <th scope="col">Nama</th>
             <th scope="col">quantity</th>
+            <th scope="col">satuan</th>
             <th scope="col">Aksi</th>
           </tr>
         </thead>
@@ -27,6 +28,7 @@
               <th scope="row"><?= $i++; ?></th>
               <td><?= $s['name']; ?></td>
               <td><?= $s['quantity']; ?></td>
+              <td><?= $s['satuan'];; ?></td>
               <td>
                 <a href="/admin/stok-bahan/detail/<?= $s['name']; ?>" class="btn btn-success">Detail</a>
               </td>

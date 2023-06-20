@@ -46,6 +46,7 @@ class StokBahan extends BaseController
     $this->stokBahanModel->save([
       'name' => $this->request->getVar('name'),
       'quantity' => $this->request->getVar('quantity'),
+      'satuan' => $this->request->getVar('satuan')
     ]);
 
     session()->setFlashdata('pesan', 'Data Berhasil Ditambahkan.');
@@ -70,7 +71,8 @@ class StokBahan extends BaseController
     $this->stokBahanModel->save([
       'id' => $id,
       'name' => $this->request->getVar('name'),
-      'quantity' => $this->request->getVar('quantity')
+      'quantity' => $this->request->getVar('quantity'),
+      'satuan' => $this->request->getVar('satuan')
     ]);
 
     session()->setFlashdata('pesan', 'Data Berhasil diubah.');
