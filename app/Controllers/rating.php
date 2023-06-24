@@ -26,6 +26,7 @@ class Rating extends BaseController
 
     public function save()
     {
+
         $this->ratingModel->save([
             'name' => $this->request->getVar('name'),
             'rating' => $this->request->getVar('rating'),

@@ -10,7 +10,7 @@ class RatingModel extends Model
     protected $table = 'Rating';
     protected $useTimestamps = false;
     protected $allowedFields = [
-        'id_review  ',
+        'id_review',
         'name',
         'rating',
         'pesan',
