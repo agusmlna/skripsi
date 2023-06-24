@@ -16,14 +16,14 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><?= $m['menu']; ?></h5>
                                         <p class="card-text fs-5 fw-bold cai-color-text mb-1 text-price">Rp. <?= number_format($m['harga'], 0, '.', '.'); ?> </p>
-                                        <!-- <a href="<?= base_url('home/pesan-produk/buy/' . $m['id']) ?>" class="btn btn-dark w-100">Pesan</a> -->
-                                        <div class="btn-pesan">
-                                            <a href="#" class="btn btn-dark w-100 ">Pesan</a>
+                                        <button class="btn-pesan btn btn-dark w-100">
+                                            <a class="text-pesan text-white text-decoration-none">Pesan</a>
                                             <div class="text-id d-none"><?= $m['id']; ?></div>
                                             <div class="text-menu d-none"><?= $m['menu']; ?></div>
                                             <div class="text-price d-none"><?= $m['harga']; ?></div>
-                                            <div class="text-price d-none"><?= $m['sampul']; ?></div>
-                                        </div>
+                                            <div class="text-sampul d-none"><?= $m['sampul']; ?></div>
+                                            <div class="recipe d-none"><?= $m['recipe']; ?></div>
+                                        </button>
                                     </div>
                                 </div>
                             </a>
