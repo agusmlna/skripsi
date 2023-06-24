@@ -24,6 +24,23 @@
                         <input type="text" class="form-control" id="quantity" name="quantity">
                     </div>
                 </div>
+                <fieldset class="row mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">Satuan</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="satuan" id="gridRadios1" value="ml" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                                ml
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="satuan" id="gridRadios2" value="gram">
+                            <label class=" form-check-label" for="gridRadios2">
+                                gram
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
         </div>

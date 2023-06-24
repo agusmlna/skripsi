@@ -2,19 +2,8 @@
 
 <?= $this->section('usercontent'); ?>
 
-<div class="container">
+<div class="container pt-5 mt-5">
     <div class="row">
-        <div class="col-sm-4 text-center m-auto">
-            <h1><span id="avg_rating">0.0</span>/5.0</h1>
-            <div>
-                <i class="fa fa-star star-light main_star mr-1"></i>
-                <i class="fa fa-star star-light main_star mr-1"></i>
-                <i class="fa fa-star star-light main_star mr-1"></i>
-                <i class="fa fa-star star-light main_star mr-1"></i>
-                <i class="fa fa-star star-light main_star mr-1"></i>
-            </div>
-            <span id="total_review">0</span> Reviews
-        </div>
         <div class="col-sm-4 progressSection">
             <div class='holder'>
                 <div>
@@ -102,6 +91,39 @@
     <div id="display_review">
 
     </div>
+
+
+    <div class="px-xl-4 px-2">
+        <h2 class="fw-bold text-center">Ulasan</h2>
+        <hr>
+        <?php foreach ($rating as $r) : ?>
+            <div class="d-flex">
+                <div>
+                    <div class="container pe-4">
+                        <div class="row border border-3 rounded-5 px-2 py-2">
+                            <h1>A</h1>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="fw-bold nopadding"><?= $r['name']; ?></h6>
+                    <div class="d-flex fs-6" style="color: #FFB813;">
+                        <?php for ($i = 0; $i < 5; $i++) : ?>
+                            <?php if ($i < $r['rating']) : ?>
+                                <i class="fa-solid fa-star" style="color: #f3d853;"></i>
+                            <?php else : ?>
+                                <i class="fa-regular fa-star" style="color: #f3d853;"></i>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                        <span class="text-secondary ps-2"><?= date('d/M/Y', strtotime($r['tanggal'])); ?></span>
+                    </div>
+                    <p class="fs-5"><?= $r['pesan']; ?></p>
+                </div>
+            </div>
+            <hr>
+        <?php endforeach; ?>
+
+    </div>
 </div>
 
 <div class="modal" id="myModal">
@@ -140,8 +162,9 @@
                     </div>
                 </div>
             </form>
+
+            <hr>
         </div>
     </div>
-</div>
 
-<?= $this->endSection(); ?>
+    <?= $this->endSection(); ?>

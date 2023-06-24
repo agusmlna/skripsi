@@ -2,7 +2,6 @@
 
 namespace Config;
 
-use App\Controllers\Menu;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -33,14 +32,18 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'SignController::index');
 // route for sign in
-$routes->get('admin/login', 'SignController::index');
+$routes->get('/login', 'SignController::index');
 
 // route for process sign in
 $routes->post('/proseslogin', 'SignController::processLogin');
 
-$routes->get('/pages', 'Pages::index');
-$routes->get('/pages/about', 'Pages::about');
-$routes->get('/pages/contact', 'Pages::contact');
+//route for process regist
+$routes->get('/regist', 'SignController::regist');
+$routes->post('/prosesregist', 'SignController::processRegist');
+
+$routes->get('/logout', 'SignController::logout');
+
+$routes->get('/admin', 'Dashboard::index');
 $routes->get('/admin/menu', 'Menu::index');
 $routes->get('/menu/detail/(:any)', 'Menu::detail/$1');
 $routes->get('/menu/create', 'Menu::create');
@@ -63,6 +66,9 @@ $routes->get('/admin/reservasi', 'Reservasi::index');
 // routes Order
 $routes->get('/admin/order', 'Order2::index');
 
+// routes kelola kostumer
+$routes->get('/admin/kelolakostumer', 'User::kelolakostumer');
+
 // routes coba order
 $routes->get('/coba-order', 'Order::index');
 $routes->get('/coba-order/save/(:any)', 'Order::save/$1');
@@ -82,6 +88,8 @@ $routes->get('home/promo', 'Promo::index');
 $routes->get('home/rating', 'Rating::index');
 $routes->post('home/rating/save', 'Rating::save');
 
+$routes->get('home/detailtransaksi', 'Detailtransaksi::index');
+$routes->get('home/detailtransaksi/delete/(:num)', 'Detailtransaksi::delete/$1');
 
 
 /*

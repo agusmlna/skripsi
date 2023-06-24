@@ -12,6 +12,7 @@ class StokBahanModel extends Model
   protected $allowedFields = [
     'name',
     'quantity',
+    'satuan',
   ];
 
   public function getStokBahan($name = false)
