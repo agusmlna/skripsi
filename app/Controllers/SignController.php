@@ -12,7 +12,6 @@ class SignController extends BaseController
     //menampilkan halaman sign in
     public function index()
     {
-        $db = \Config\Database::connect();
         $data = [
             'title' => 'Login | Motamorph Coffee'
         ];
@@ -51,7 +50,7 @@ class SignController extends BaseController
             $pass = $data['password'];
             if ($password == $pass) {
                 loginSuccessUser($data);
-                return redirect()->to('home');
+                return redirect()->to(base_url('/home'));
             } else {
                 session()->setFlashdata('pesan', 'Login Gagal');
                 return redirect()->to('/login');
