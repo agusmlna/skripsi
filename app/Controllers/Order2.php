@@ -32,6 +32,7 @@ class Order2 extends BaseController
             session()->setFlashdata('pesan', 'order Kosong');
         } else {
             $this->orderModel->save([
+                'id_user' => session()->iduser,
                 'customer_name' => $this->request->getVar('CustomerName'),
                 'order_menu' => $this->request->getVar('menuOrder'),
                 'total' => $this->request->getVar('total'),

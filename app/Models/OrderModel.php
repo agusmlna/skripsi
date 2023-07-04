@@ -10,6 +10,7 @@ class OrderModel extends Model
     protected $table = 'orders';
     protected $useTimestamps = false;
     protected $allowedFields = [
+        'id_user',
         'customer_name',
         'order_menu',
         'no_telpon',
