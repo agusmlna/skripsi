@@ -93,7 +93,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Benar</button>
+                                <button type="submit" class="btn btn-primary btn-submit" disabled>Benar</button>
 
                             </div>
                         </div>
@@ -107,5 +107,8 @@
         </div>
     </div>
 </div>
+
+<!-- for transfer data to js -->
+<div class="data-reservasi d-none"><?= json_encode($reservasi); ?></div>
 
 <?= $this->endSection(); ?>
