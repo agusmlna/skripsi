@@ -17,6 +17,7 @@ class OrderModel extends Model
         'status',
         'total',
         'type_payment',
+        'buktibayar',
         'order_date'
     ];
 

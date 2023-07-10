@@ -69,7 +69,7 @@
 
                     <div class="row justify-content-center pt-3">
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" value="bca" name="type-payment" id="btnradio1" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" value="bca" name="type-payment" id="btnradio1" autocomplete="off" data-bs-toggle="modal" data-bs-target="#exampleModal" checked>
                             <label class="btn btn-outline-primary" for="btnradio1"><img class="fit-image" src="/img/bca.png" width="105px" height="55px"></label>
 
                             <input type="radio" class="btn-check" value="cash" name="type-payment" id="btnradio3" autocomplete="off">
@@ -80,6 +80,29 @@
                     <div class="row pt-5 mt-1">
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary" type="submit">Bayar</button>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5 text-dark" id="buktibayar" name="buktibayar">Upload Bukti Pembayaran</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-dark">
+                                    <h3>BCA / NO REK : 1043394746</h3>
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="bukti-pembayaran" name="bukti-pembayaran">
+                                        <label class="input-group-text" for="bukti-pembayaran">Upload</label>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -19,6 +19,7 @@
                         <th scope="col">No Telepon</th>
                         <th scope="col">No Meja</th>
                         <th scope="col">tanggal</th>
+                        <th scope="col">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -32,7 +33,7 @@
                             <td><?= $r['no_meja']; ?></td>
                             <td><?= $r['tanggal']; ?></td>
                             <td>
-                                <a href="/menu/detail/<?= $r['id']; ?>" class="btn btn-success">Detail</a>
+                                <a href="/menu/detail/<?= $r['id']; ?>" class="btn btn-success"></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
