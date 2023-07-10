@@ -65,13 +65,15 @@
 
                     <hr>
 
+                    <h4 class="text-dark">Metode Pembayaran</h4>
+
                     <div class="row justify-content-center pt-3">
                         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                             <input type="radio" class="btn-check" value="bca" name="type-payment" id="btnradio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary" for="btnradio1"><img class="fit-image" src="https://i.imgur.com/5TqiRQV.jpg" width="105px" height="55px"></label>
+                            <label class="btn btn-outline-primary" for="btnradio1"><img class="fit-image" src="/img/bca.png" width="105px" height="55px"></label>
 
                             <input type="radio" class="btn-check" value="cash" name="type-payment" id="btnradio3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio3">Radio 3</label>
+                            <label class="btn btn-outline-primary" for="btnradio3"><img class="fit-image" src="/img/kasir.png" width="105px" height="55px"></label>
                         </div>
                     </div>
 

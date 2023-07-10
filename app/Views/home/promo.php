@@ -1,7 +1,7 @@
 <?= $this->extend('home/template/base'); ?>
 
 <?= $this->section('usercontent'); ?>
-<div class="container">
+<div class="container pt-5 mt-5">
     <div class="row">
         <div class="col">
             <div class="cardbg-transparent" style="width: 30rem;">

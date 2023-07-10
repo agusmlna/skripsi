@@ -97,8 +97,6 @@ class SignController extends BaseController
             session()->setFlashdata('pesan', 'Email already exist');
             return redirect()->to('/regist');
         }
-        // insert data kedai to Kedai table
-        //// make slug and check if slug already exist
 
         $datauser = [
             'username' => $this->request->getVar('username'),

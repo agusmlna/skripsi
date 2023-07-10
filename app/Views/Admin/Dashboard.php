@@ -19,9 +19,9 @@
             <div class="d-flex pt-5 ps-3">
                 <div>
                     <i class="fa-solid fa-whiskey-glass fa-2xl" style="color: #000000;"></i>
-                    <h2 class="text-dark pt-2">Menu</h2>
+                    <h2 class="text-dark pt-2">Pesanan</h2>
                     <p class="text-white">
-                        2 Menu
+                        <?= count(($orders)); ?> Pesanan
                     </p>
                 </div>
             </div>
@@ -30,9 +30,9 @@
             <div class="d-flex pt-5 ps-3">
                 <div>
                     <i class="fa-solid fa-whiskey-glass fa-2xl" style="color: #000000;"></i>
-                    <h2 class="text-dark pt-2">Menu</h2>
+                    <h2 class="text-dark pt-2">Reservasi</h2>
                     <p class="text-white">
-                        2 Menu
+                        <?= count($reservasi); ?> Reservasi
                     </p>
                 </div>
             </div>
@@ -41,9 +41,23 @@
             <div class="d-flex pt-5 ps-3">
                 <div>
                     <i class="fa-solid fa-whiskey-glass fa-2xl" style="color: #000000;"></i>
-                    <h2 class="text-dark pt-2">Menu</h2>
+                    <h2 class="text-dark pt-2">Stok Bahan</h2>
                     <p class="text-white">
-                        2 Menu
+                        <?= count($stokBahan); ?> Bahan Baku
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row justify-content-center pt-4">
+        <div class="col-sm-3 border rounded-3 bg-danger mx-2">
+            <div class="d-flex pt-5 ps-3">
+                <div>
+                    <i class="fa-solid fa-whiskey-glass fa-2xl" style="color: #000000;"></i>
+                    <h2 class="text-dark pt-2">Akun Pelanggan</h2>
+                    <p class="text-white">
+                        <?= count($User); ?> Akun Pelanggan
                     </p>
                 </div>
             </div>

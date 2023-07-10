@@ -59,7 +59,7 @@
 
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
+                    Booking
                 </button>
 
                 <!-- Modal -->

@@ -14,6 +14,7 @@ class OrderModel extends Model
         'customer_name',
         'order_menu',
         'no_telpon',
+        'status',
         'total',
         'type_payment',
         'order_date'
