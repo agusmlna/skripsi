@@ -25,10 +25,12 @@ class Order2 extends BaseController
     {
         // data variabel berasal dari input file
         $buktipembayaran = $this->request->getFile('bukti-pembayaran');
-        // pindahkan ke folder image
-        $buktipembayaran->move('img');
-        // ambil nama file fotoProduk
-        $buktipembayaran = $buktipembayaran->getName();
+        if (file_exists($buktipembayaran)) {
+            // pindahkan ke folder image
+            $buktipembayaran->move('img');
+            // ambil nama file fotoProduk
+            $buktipembayaran = $buktipembayaran->getName();
+        }
 
         if ($this->request->getVar('CustomerName') == "") {
             session()->setFlashdata('pesan', 'Nama Kosong');
@@ -38,6 +40,10 @@ class Order2 extends BaseController
         ) {
             session()->setFlashdata('pesan', 'order Kosong');
         } else {
+            date_default_timezone_set('Asia/Jakarta');
+
+            $orderDate = date("Y-m-d H:i:s");
+
             $this->orderModel->save([
                 'id_user' => session()->iduser,
                 'customer_name' => $this->request->getVar('CustomerName'),
@@ -45,10 +51,26 @@ class Order2 extends BaseController
                 'total' => $this->request->getVar('total'),
                 'type_payment' => $this->request->getVar('type-payment'),
                 'buktibayar' => $buktipembayaran,
-                'order_date' => date('Y/m/d H:i:s'),
+                'order_date' => $orderDate,
+                'status' => 'Di Proses'
             ]);
         }
 
         return redirect()->to('home/pesan-produk');
+    }
+
+    public function detail($orders)
+    {
+        $data = [
+            'title' => 'Detail Pembayaran',
+            'orders' => $this->orderModel->getOrders($orders),
+        ];
+        return view('order/detail', $data);
+    }
+
+    public function sukses($id)
+    {
+        $this->orderModel->changeStatus($id);
+        return redirect()->to('admin/order');
     }
 }
