@@ -10,11 +10,13 @@ class ReservasiModel extends Model
     protected $table = 'Reservasi';
     protected $useTimestamps = false;
     protected $allowedFields = [
+        'id_user',
         'nama_pemesan',
         'email',
         'no_telpon',
         'no_meja',
         'tanggal',
+        'status',
         'created_at'
     ];
 
@@ -24,6 +26,11 @@ class ReservasiModel extends Model
             return $this->findAll();
         }
 
-        return $this->where(['Reservasi' => $reservasi])->first();
+        return $this->where(['reservasi' => $reservasi])->first();
+    }
+
+    public function getReservasibyid($id_user)
+    {
+        return $this->where(['id_user' => $id_user])->findAll();
     }
 }

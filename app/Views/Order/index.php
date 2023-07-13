@@ -4,14 +4,14 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h1 class="my-1"> Daftar Data Pesanan</h1>
+            <h1 class="my-1 py-3"> Daftar Data Pesanan</h1>
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>
                 </div>
             <?php endif; ?>
-            <table class="table">
-                <thead>
+            <table class="table table-dark table-borderless">
+                <thead class="table-dark">
                     <tr>
                         <th scope="col">No</th>
                         <th scope="col">Nama Pemesan</th>
@@ -19,9 +19,10 @@
                         <th scope="col">Quantity</th>
                         <th scope="col">Harga / Produk</th>
                         <th scope="col">Harga Total</th>
-                        <th scope="col">Tipe Pembayaran</th>
-                        <th scope="col">Bukti Pembayaran</th>
+                        <th scope="col">Tipe</th>
+                        <th scope="col">Bukti</th>
                         <th scope="col">Tanggal</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -52,10 +53,14 @@
                             <td><?= $o['total']; ?></td>
                             <td><?= $o['type_payment']; ?></td>
                             <td><img src="/img/<?= $o['buktibayar']; ?>" alt="" class="buktibayar" style="width: 120px;"></td>
-                            <td><?= $o['order_date']; ?></td>
+                            <td><?= date('d/m/Y', strtotime($o['order_date'])) ?></td>
+                            <td><span class="badge text-bg-danger"><?= $o['status']; ?></td>
                             <td>
-                                <a href="" class="btn btn-success">Selesai</a>
-                                <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="returnDataToModal(<?= $o['id']; ?>, <?= $o['total']; ?>)">Detail</a>
+                                <a href="/admin/order/sukses/<?= $o['id']; ?>" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
+                                <?php if ($o['type_payment'] == 'cash') : ?>
+                                    <a href="" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="returnDataToModal(<?= $o['id']; ?>, <?= $o['total']; ?>)"><i class="fa-solid fa-money-bill"></i></a>
+                                <?php endif; ?>
+                                <a href="/admin/order/detail/<?= $o['id']; ?>" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

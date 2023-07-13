@@ -65,6 +65,8 @@ $routes->get('/admin/reservasi', 'Reservasi::index');
 
 // routes Order
 $routes->get('/admin/order', 'Order2::index');
+$routes->get('/admin/order/detail(:any)', 'Order2::detail/$1');
+$routes->get('/admin/order/sukses/(:any)', 'Order2::sukses/$1');
 
 // routes kelola kostumer
 $routes->get('/admin/kelolakostumer', 'User::kelolakostumer');
@@ -90,6 +92,9 @@ $routes->post('home/rating/save', 'Rating::save');
 
 $routes->get('home/detailtransaksi', 'Detailtransaksi::index');
 $routes->get('home/detailtransaksi/delete/(:num)', 'Detailtransaksi::delete/$1');
+
+$routes->get('home/detailreservasi', 'Detailreservasi::index');
+$routes->get('home/detailreservasi/delete/(:num)', 'Detailreservasi::delete/$1');
 
 
 /*

@@ -34,4 +34,11 @@ class OrderModel extends Model
     {
         return $this->where(['id_user' => $id_user])->findAll();
     }
+
+    public function changeStatus($id)
+    {
+        return $this->where(['id' => $id])->save([
+            'status' => 'Sukses'
+        ]);
+    }
 }
