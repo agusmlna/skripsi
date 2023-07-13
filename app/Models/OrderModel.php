@@ -37,7 +37,7 @@ class OrderModel extends Model
 
     public function changeStatus($id)
     {
-        return $this->where(['id' => $id])->save([
+        return $this->update($id, [
             'status' => 'Sukses'
         ]);
     }
