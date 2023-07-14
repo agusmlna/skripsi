@@ -3,6 +3,8 @@ const idOrder = document.querySelector(".id-order");
 const totalOrder = document.querySelector(".total-order");
 const change = document.querySelector(".change");
 const formPay = document.querySelector(".form-pay");
+const formChange = document.querySelector(".form-change");
+console.log(formChange);
 
 //
 let totalPrice = 0;
@@ -24,6 +26,7 @@ function removeAllChecked() {
 
 function changeReturn() {
   change.textContent = valuePay - totalPrice;
+  formChange.value = valuePay - totalPrice;
 }
 
 // memasukan data ke modal

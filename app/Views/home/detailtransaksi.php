@@ -30,7 +30,13 @@
                                     </td>
                                     <td><?= $o['total']; ?></td>
                                     <td><?= $o['customer_name']; ?></td>
-                                    <td><span class="badge text-bg-danger"><?= $o['status']; ?></span></td>
+                                    <?php if ($o['status'] == 'Sukses') : ?>
+                                        <td><span class="badge text-bg-success"><?= $o['status']; ?></td>
+                                    <?php elseif ($o['status'] == 'Di Proses') : ?>
+                                        <td><span class="badge text-bg-primary"><?= $o['status']; ?></td>
+                                    <?php else : ?>
+                                        <td><span class="badge text-bg-danger"><?= $o['status']; ?></td>
+                                    <?php endif; ?>
                                     <td><?= $o['order_date']; ?></td>
                                 </tr>
                             </tbody>

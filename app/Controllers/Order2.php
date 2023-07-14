@@ -73,4 +73,23 @@ class Order2 extends BaseController
         $this->orderModel->changeStatus($id);
         return redirect()->to('admin/order');
     }
+
+    public function laporanpenjualan()
+    {
+        $data = [
+            'title' => 'Daftar Order',
+            'orders' => $this->orderModel->getOrdersbystatus()
+        ];
+
+        return view('Order/laporanpenjualan', $data);
+    }
+
+    public function savePayment($id)
+    {
+        $this->orderModel->update($id, [
+            'bayar' => $this->request->getVar('bayar'),
+            'kembalian' => $this->request->getVar('kembalian')
+        ]);
+        return redirect()->to('admin/order');
+    }
 }

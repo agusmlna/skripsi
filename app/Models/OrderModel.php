@@ -18,7 +18,9 @@ class OrderModel extends Model
         'total',
         'type_payment',
         'buktibayar',
-        'order_date'
+        'order_date',
+        'bayar',
+        'kembalian'
     ];
 
     public function getOrders($orders = false)
@@ -40,5 +42,10 @@ class OrderModel extends Model
         return $this->update($id, [
             'status' => 'Sukses'
         ]);
+    }
+
+    public function getOrdersbystatus()
+    {
+        return $this->where(['status' => 'sukses'])->findAll();
     }
 }

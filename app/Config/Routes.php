@@ -67,6 +67,9 @@ $routes->get('/admin/reservasi', 'Reservasi::index');
 $routes->get('/admin/order', 'Order2::index');
 $routes->get('/admin/order/detail(:any)', 'Order2::detail/$1');
 $routes->get('/admin/order/sukses/(:any)', 'Order2::sukses/$1');
+$routes->get('/admin/order/laporanpenjualan', 'Order2::laporanpenjualan');
+$routes->get('/admin/order/laporanpembayaran', 'Order2::laporanpembayaran');
+$routes->post('/admin/order/save/(:any)', 'Order2::savePayment/$1');
 
 // routes kelola kostumer
 $routes->get('/admin/kelolakostumer', 'User::kelolakostumer');
@@ -96,6 +99,8 @@ $routes->get('home/detailtransaksi/delete/(:num)', 'Detailtransaksi::delete/$1')
 $routes->get('home/detailreservasi', 'Detailreservasi::index');
 $routes->get('home/detailreservasi/delete/(:num)', 'Detailreservasi::delete/$1');
 
+$routes->get('/', 'PdfController::index');
+$routes->get('/pdf/generate', 'PdfController::generate');
 
 /*
  * --------------------------------------------------------------------
