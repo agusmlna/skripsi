@@ -84,6 +84,16 @@ class Order2 extends BaseController
         return view('Order/laporanpenjualan', $data);
     }
 
+    public function laporanpembayaran()
+    {
+        $data = [
+            'title' => 'Daftar Order',
+            'orders' => $this->orderModel->getOrdersbystatus()
+        ];
+
+        return view('Order/laporanpembayaran', $data);
+    }
+
     public function savePayment($id)
     {
         $this->orderModel->update($id, [

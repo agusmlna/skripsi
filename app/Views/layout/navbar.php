@@ -11,7 +11,7 @@
                 <a class="nav-link active" href="<?= base_url('/admin/order'); ?>">Pesanan</a>
                 <a class="nav-link active" href="/admin/reservasi">Reservasi</a>
                 <a class="nav-link active" href="/admin/menu">Menu</a>
-                <a class="nav-link active" href="/admin/stok-bahan">stok bahan</a>
+                <a class="nav-link active" href="/admin/stok-bahan">Bahan Baku</a>
                 <a class="nav-link active" href="/admin/kelolakostumer">Kelola Kostumer</a>
                 <a class="nav-link active" href="/coba-order">coba order</a>
                 <li class="nav-item dropdown">

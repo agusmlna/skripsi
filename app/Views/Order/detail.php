@@ -61,9 +61,9 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <h5 class="col-4">Total Payment</h5>
+                        <h5 class="col-4 fw-bold">Total Payment</h5>
                         <div class="col-4 text-end">
-                            <h5>Rp. 60000</h5>
+                            <h5 class="fw-bold">Rp. 60000</h5>
                         </div>
                     </div>
                     <div class="row justify-content-center mt-1">

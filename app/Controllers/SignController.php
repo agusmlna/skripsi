@@ -63,7 +63,7 @@ class SignController extends BaseController
                 if ($password == $pass) {
                     // dd('sucess');
                     loginSuccessAdmin($data);
-                    return redirect()->to('/admin/menu');
+                    return redirect()->to('/admin');
                 } else {
                     session()->setFlashdata('pesan', 'Login Gagal');
                     return redirect()->to('/login');

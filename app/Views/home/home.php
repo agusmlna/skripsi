@@ -21,15 +21,15 @@
                 <div class="carousel-item" data-bs-interval="2000">
                     <img src="img/wallpaper2.jpg" class="d-block w-100 rounded-3" alt="">
                     <div class="carousel-caption position-absolute top-50 translate-middle-y text-start">
-                        <h1 class="mt-0 mt-xl-3 header-banner">Diskon 10% <br> Untuk Semua Member</h1>
-                        <p class="p-banner">Mulai pada awal 01 agustus sampai dengan 30 september 2021</p>
+                        <h1 class="mt-0 mt-xl-3 header-banner">Beli 2 Motasuren Gratis Kentang <br> Merayakan Hari Kemerdekaan</h1>
+                        <p class="p-banner">Berlaku Hingga 20 Agustus 2023</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="img/wallpaper1.jpg" class="d-block w-100 rounded-3" alt="...">
                     <div class="carousel-caption position-absolute top-50 translate-middle-y text-start">
-                        <h1 class="mt-0 mt-xl-3 header-banner">Diskon 10% <br> Untuk Semua Member</h1>
-                        <p class="p-banner">Mulai pada awal 01 agustus sampai dengan 30 september 2021</p>
+                        <h1 class="mt-0 mt-xl-3 header-banner">Beli 2 Motasuren Gratis Kentang <br> Merayakan Hari Kemerdekaan</h1>
+                        <p class="p-banner">Berlaku Hingga 20 Agustus 2023</p>
                     </div>
                 </div>
             </div>

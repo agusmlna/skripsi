@@ -18,7 +18,7 @@
                         <a class="nav-link" href="/home/reservasi">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/home/promo">Promo</a>
+                        <a class="nav-link" href="/home/promo">Promo&Tips</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/home/rating">Rating</a>

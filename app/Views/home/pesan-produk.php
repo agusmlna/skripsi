@@ -5,6 +5,8 @@
 
 <div class="container pt-5 mt-5">
     <div class="row">
+        <h1 class="text-center">Menu</h1>
+        <h3>Pilih Berbagai Macam Menu</h3>
         <div class="col-sm-8">
             <div class="container">
                 <div class="row">
