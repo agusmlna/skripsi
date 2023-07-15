@@ -20,50 +20,38 @@
                 <div class="row pt-4 justify-content-center">
                     <h5 class="col-4 fw-bold">Nama </h5>
                     <div class="col-4 text-end">
-                        <h5 class="fw-bold">Agus Maulana</h5>
+                        <h5 class="fw-bold"><?= $order['customer_name']; ?></h5>
                     </div>
                 </div>
                 <div class="container pt-2">
-                    <div class="row justify-content-center">
-                        <p class="col-3">Matcha</p>
-                        <p class="col-2">x 2</p>
-                        <div class="col-3 text-end">
-                            <p>Rp. 30000</p>
+                    <?php foreach (json_decode($order['order_menu']) as $o) : ?>
+                        <div class="row justify-content-center">
+                            <p class="col-3"><?= $o->menu; ?></p>
+                            <p class="col-2"><?= $o->quantity; ?></p>
+                            <div class="col-3 text-end">
+                                <p>Rp. <?= $o->price ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <p class="col-3">Motasuren</p>
-                        <p class="col-2">x 1</p>
-                        <div class="col-3 text-end">
-                            <p>Rp. 15000</p>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <p class="col-3">Blueocean</p>
-                        <p class="col-2">x 1</p>
-                        <div class="col-3 text-end">
-                            <p>Rp. 15000</p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                     <div class="row justify-content-center mt-1">
                         <hr class="border border-dark border-2 opacity-100" style="width: 68%;">
                     </div>
                     <div class="row pt-2 justify-content-center">
                         <p class="col-4">Cash</p>
                         <div class="col-4 text-end">
-                            <p>Rp. 100000</p>
+                            <p>Rp.<?= $order['bayar']; ?></p>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <p class="col-4">Kembalian</p>
                         <div class="col-4 text-end">
-                            <p>Rp. 40000</p>
+                            <p>Rp. <?= $order['kembalian']; ?></p>
                         </div>
                     </div>
                     <div class="row justify-content-center">
                         <h5 class="col-4 fw-bold">Total Payment</h5>
                         <div class="col-4 text-end">
-                            <h5 class="fw-bold">Rp. 60000</h5>
+                            <h5 class="fw-bold">Rp. <?= $order['total']; ?></h5>
                         </div>
                     </div>
                     <div class="row justify-content-center mt-1">

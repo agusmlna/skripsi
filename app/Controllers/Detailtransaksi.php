@@ -15,7 +15,7 @@ class Detailtransaksi extends BaseController
     {
         $data = [
             'title' => 'Daftar Order',
-            'orders' => $this->orderModel->getOrdersbyid(session()->iduser)
+            'orders' => $this->orderModel->getOrdersByUserId(session()->iduser)
         ];
         return view('home/Detailtransaksi', $data);
     }

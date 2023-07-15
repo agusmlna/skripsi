@@ -66,7 +66,7 @@ $routes->post('/admin/reservasi', 'Reservasi::filter');
 
 // routes Order
 $routes->get('/admin/order', 'Order2::index');
-$routes->get('/admin/order/detail(:any)', 'Order2::detail/$1');
+$routes->get('/admin/order/detail/(:any)', 'Order2::detail/$1');
 $routes->get('/admin/order/sukses/(:any)', 'Order2::sukses/$1');
 $routes->get('/admin/order/laporanpenjualan', 'Order2::laporanpenjualan');
 $routes->get('/admin/order/laporanpembayaran', 'Order2::laporanpembayaran');

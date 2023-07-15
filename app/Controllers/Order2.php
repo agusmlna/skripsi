@@ -59,11 +59,11 @@ class Order2 extends BaseController
         return redirect()->to('home/pesan-produk');
     }
 
-    public function detail($orders)
+    public function detail($id)
     {
         $data = [
             'title' => 'Detail Pembayaran',
-            'orders' => $this->orderModel->getOrders($orders),
+            'order' => $this->orderModel->getOrderById($id),
         ];
         return view('order/detail', $data);
     }

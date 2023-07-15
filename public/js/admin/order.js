@@ -4,10 +4,13 @@ const totalOrder = document.querySelector(".total-order");
 const change = document.querySelector(".change");
 const formPay = document.querySelector(".form-pay");
 const formChange = document.querySelector(".form-change");
+const buttonSubmit = document.querySelector(".btn-submit");
+// const form = document.querySelector("form");
 
 //
 let totalPrice = 0;
 let valuePay = 0;
+let _id = "";
 
 // datePicker
 $("#datepicker-1").datepicker();
@@ -35,6 +38,7 @@ function changeReturn() {
 // memasukan data ke modal
 // ambil data dari php html
 function returnDataToModal(id, total) {
+  _id = id;
   idOrder.textContent = id;
   totalOrder.textContent = total;
   totalPrice = total;
@@ -66,3 +70,7 @@ formPay.addEventListener("input", (event) => {
   }
   changeReturn();
 });
+
+function submitPay(form) {
+  form.action = `/admin/order/save/${_id}`;
+}
