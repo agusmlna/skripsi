@@ -102,4 +102,18 @@ class Order2 extends BaseController
         ]);
         return redirect()->to('admin/order');
     }
+
+    public function filter()
+    {
+        $firstDate = date("Y-m-d H:i:s", strtotime($this->request->getVar('tanggal-1')));
+        $secondDate = date("Y-m-d H:i:s", strtotime($this->request->getVar('tanggal-2')));
+
+
+        $data = [
+            'title' => 'Daftar Order',
+            'orders' => $this->orderModel->getOrdersByRangeDate($firstDate, $secondDate)
+        ];
+
+        return view('Order/index', $data);
+    }
 }

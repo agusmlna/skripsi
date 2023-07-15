@@ -48,4 +48,9 @@ class OrderModel extends Model
     {
         return $this->where(['status' => 'sukses'])->findAll();
     }
+
+    public function getOrdersByRangeDate($firstDate, $secondDate)
+    {
+        return $this->where("order_date BETWEEN '{$firstDate}' AND '{$secondDate}'")->findAll();
+    }
 }

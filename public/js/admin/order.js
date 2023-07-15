@@ -4,11 +4,14 @@ const totalOrder = document.querySelector(".total-order");
 const change = document.querySelector(".change");
 const formPay = document.querySelector(".form-pay");
 const formChange = document.querySelector(".form-change");
-console.log(formChange);
 
 //
 let totalPrice = 0;
 let valuePay = 0;
+
+// datePicker
+$("#datepicker-1").datepicker();
+$("#datepicker-2").datepicker();
 
 function addChecked(payInput) {
   payInput.checked = true;
