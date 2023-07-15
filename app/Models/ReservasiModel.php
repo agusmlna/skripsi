@@ -33,4 +33,9 @@ class ReservasiModel extends Model
     {
         return $this->where(['id_user' => $id_user])->findAll();
     }
+
+    public function getOrdersByRangeDate($firstDate, $secondDate)
+    {
+        return $this->where("tanggal BETWEEN '{$firstDate}' AND '{$secondDate}'")->findAll();
+    }
 }

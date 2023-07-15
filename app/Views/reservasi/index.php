@@ -12,48 +12,50 @@
                     </div>
                 </div>
                 <hr>
-                <div class="row">
-                    <div class="col">
-                        <div class="row">
-                            <label for="tanggal" class="col-1 col-form-label">Date</label>
-                            <div class="col-5 pb-3">
-                                <div class="input-group date" id="datepicker">
-                                    <input type="text" class="form-control" id="inputTanggal" name="tanggal" />
-                                    <span class="input-group-append">
-                                        <span class="input-group-text bg-light d-block">
-                                            <i class="fa fa-calendar"></i>
+                <form action="/admin/reservasi" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <label for="tanggal-1" class="col-1 col-form-label">Date</label>
+                                <div class="col-5 pb-3">
+                                    <div class="input-group date" id="datepicker-1">
+                                        <input type="text" class="form-control" id="inputTanggal-1" name="tanggal-1" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
                                         </span>
-                                    </span>
-                                </div>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <label for="tanggal-2" class="col-1 col-form-label">S/D</label>
+                                <div class="col-5 pb-3">
+                                    <div class="input-group date" id="datepicker-2">
+                                        <input type="text" class="form-control" id="inputTanggal-2" name="tanggal-2" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="row">
-                            <label for="tanggal" class="col-1 col-form-label">S/D</label>
-                            <div class="col-5 pb-3">
-                                <div class="input-group date" id="datepicker">
-                                    <input type="text" class="form-control" id="inputTanggal" name="tanggal" />
-                                    <span class="input-group-append">
-                                        <span class="input-group-text bg-light d-block">
-                                            <i class="fa fa-calendar"></i>
-                                        </span>
-                                    </span>
-                                </div>
-
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary me-md-1" type="submit"><i class="fa-solid fa-filter" style="color: #ffffff;"></i>Filter</button>
+                                <button type="reset" class="btn btn-outline-dark">Reset</button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button class="btn btn-primary me-md-1" type="button"><i class="fa-solid fa-filter" style="color: #ffffff;"></i>Filter</button>
-                            <button type="button" class="btn btn-outline-dark">Reset</button>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
             <table class="table table-striped table-hover">
                 <thead>
