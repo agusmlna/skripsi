@@ -62,9 +62,18 @@
                     </div>
                 </div>
             </form>
-            <a href="<?php echo site_url('pdf/generate') ?>">
-                Download PDF
-            </a>
+            <form action="/pdf/generate/" method="get">
+                <?php
+                $arrId = array();
+                for ($i = 0; $i < count($orders); $i++) {
+                    array_push($arrId, $orders[$i]['id']);
+                }
+                ?>
+                <input type="hidden" name="arrId" value=<?= json_encode($arrId); ?>>
+                <button type="submit">
+                    Download PDF
+                </button>
+            </form>
             <table class="table table-dark table-borderless">
                 <thead class="table-dark">
                     <tr>
