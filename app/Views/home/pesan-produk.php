@@ -108,6 +108,7 @@
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="input-stok" class="input-stok">
             </form>
         </div>
     </div>

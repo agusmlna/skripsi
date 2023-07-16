@@ -3,13 +3,16 @@
 namespace App\Controllers;
 
 use App\Models\OrderModel;
+use App\Models\StokBahanModel;
 
 class Order2 extends BaseController
 {
     protected $orderModel;
+    protected $stokBahanModel;
     public function __construct()
     {
         $this->orderModel = new OrderModel();
+        $this->stokBahanModel = new StokBahanModel();
     }
     public function index()
     {
@@ -57,6 +60,13 @@ class Order2 extends BaseController
                 'order_date' => $orderDate,
                 'status' => 'Di Proses'
             ]);
+            $a = json_decode($this->request->getVar('input-stok'));
+            for ($i = 0; $i < count($a); $i++) {
+                $data = [
+                    'quantity' =>  $a[$i]->quantity
+                ];
+                $this->stokBahanModel->update($a[$i]->id, $data);
+            }
         }
 
         return redirect()->to('home/pesan-produk');
