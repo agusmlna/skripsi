@@ -27,6 +27,7 @@
             </tr>
         </thead>
         <tbody>
+            <?php $totalSemua = 0; ?>
             <?php $i = 1; ?>
             <?php foreach ($orders as $o) : ?>
                 <tr>
@@ -51,13 +52,14 @@
                         <?php endforeach; ?>
                     </td>
                     <td><?= $o['total']; ?></td>
+                    <?php $totalSemua += $o['total']; ?>
                     <td><?= date('d/m/Y', strtotime($o['order_date'])) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
         <tfoot class="table-dark">
             <td colspan="5">Jumlah</td>
-            <td><?= $o['customer_name']; ?></td>
+            <td><?= $totalSemua; ?></td>
         </tfoot>
     </table>
 
