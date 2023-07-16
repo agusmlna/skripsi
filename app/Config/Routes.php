@@ -63,6 +63,7 @@ $routes->post('/admin/stok-bahan/update/(:segment)', 'StokBahan::update/$1');
 // routes reservasi
 $routes->get('/admin/reservasi', 'Reservasi::index');
 $routes->post('/admin/reservasi', 'Reservasi::filter');
+$routes->get('/admin/reservasi/sukses/(:any)', 'Reservasi::sukses/$1');
 
 // routes Order
 $routes->get('/admin/order', 'Order2::index');

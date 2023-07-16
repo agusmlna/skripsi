@@ -66,6 +66,7 @@
                         <th scope="col">No Telepon</th>
                         <th scope="col">No Meja</th>
                         <th scope="col">tanggal</th>
+                        <th scope="col">Status</th>
                         <th scope="col">Aksi</th>
                     </tr>
                 </thead>
@@ -79,8 +80,15 @@
                             <td><?= $r['no_telpon']; ?></td>
                             <td><?= $r['no_meja']; ?></td>
                             <td><?= $r['tanggal']; ?></td>
+                            <?php if ($r['status'] == 'Sukses') : ?>
+                                <td><span class="badge text-bg-success"><?= $r['status']; ?></td>
+                            <?php elseif ($r['status'] == 'Di Proses') : ?>
+                                <td><span class="badge text-bg-primary"><?= $r['status']; ?></td>
+                            <?php else : ?>
+                                <td><span class="badge text-bg-danger"><?= $r['status']; ?></td>
+                            <?php endif; ?>
                             <td>
-                                <a href="/admin/order/sukses/" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
+                                <a href="/admin/reservasi/sukses/<?= $r['id']; ?>" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
                                 <a href="/admin/order/detail/" class="btn btn-danger"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a>
                             </td>
                         </tr>

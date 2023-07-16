@@ -38,6 +38,12 @@ class Reservasi extends BaseController
         return redirect()->to('home/reservasi');
     }
 
+    public function sukses($id)
+    {
+        $this->reservasiModel->changeStatus($id);
+        return redirect()->to('admin/reservasi');
+    }
+
     public function filter()
     {
         $firstDate = date("Y-m-d H:i:s", strtotime($this->request->getVar('tanggal-1')));
@@ -45,7 +51,7 @@ class Reservasi extends BaseController
 
         $data = [
             'title' => 'Daftar Reservasi',
-            'reservasi' => $this->reservasiModel->getOrdersByRangeDate($firstDate, $secondDate)
+            'reservasi' => $this->reservasiModel->getReservasiByRangeDate($firstDate, $secondDate)
         ];
 
         return view('Reservasi/index', $data);
