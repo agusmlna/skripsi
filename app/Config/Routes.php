@@ -108,6 +108,7 @@ $routes->get('home/detailreservasi/delete/(:num)', 'Detailreservasi::delete/$1')
 $routes->get('/', 'PdfController::index');
 $routes->get('/pdf/generate', 'PdfController::generate');
 $routes->get('/pdf/generate/pembayaran', 'PdfController::generatePembayaran');
+$routes->get('/pdf/generate/struk', 'PdfController::generateStruk');
 
 /*
  * --------------------------------------------------------------------

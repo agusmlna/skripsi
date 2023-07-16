@@ -1,6 +1,6 @@
-<?= $this->extend('layout/template'); ?>
+<?= $this->extend('layout/templatestruk'); ?>
 
-<?= $this->section('content'); ?>
+<?= $this->section('contentstruk'); ?>
 <div class="container mb-3">
     <div class="row">
         <div class="col">
@@ -13,6 +13,9 @@
                         </div>
                         <div>
                             <h5 class="fw-bold nopadding pt-2">Motamorph Coffee</h5>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold nopadding pt-2"><?= date('d/m/Y', strtotime($order['order_date'])) ?></h5>
                         </div>
                     </div>
                 </div>
@@ -61,14 +64,6 @@
                         <h3 class="text-center">Terima Kasih!!</h3>
                     </div>
                 </div>
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto pt-3 text-center">
-                <form action="/pdf/generate/struk" method="get">
-                    <input type="hidden" name="id" value=<?= $order['id']; ?>>
-                    <button class="btn btn-success" type="submit">
-                        Download PDF
-                    </button>
-                </form>
             </div>
         </div>
     </div>
