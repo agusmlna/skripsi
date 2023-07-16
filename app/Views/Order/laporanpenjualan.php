@@ -11,6 +11,57 @@
                 </ol>
             </nav>
             <h1 class="my-1 pb-3">Laporan Penjualan</h1>
+            <form action="/admin/order/laporanpenjualan" method="post">
+                <div class="container py-3 my-3 border">
+                    <div class="row">
+                        <div class="col">
+                            <h4> Filter Data</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <label for="tanggal-1" class="col-1 col-form-label">Date</label>
+                                <div class="col-5 pb-3">
+                                    <div class="input-group date" id="datepicker-1">
+                                        <input type="text" class="form-control" id="inputTanggal-1" name="tanggal-1" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <label for="tanggal-2" class="col-1 col-form-label">S/D</label>
+                                <div class="col-5 pb-3">
+                                    <div class="input-group date" id="datepicker-2">
+                                        <input type="text" class="form-control" id="inputTanggal-2" name="tanggal-2" />
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-light d-block">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                                <button class="btn btn-primary me-md-1" type="submit"><i class="fa-solid fa-filter" style="color: #ffffff;"></i>Filter</button>
+                                <button type="reset" class="btn btn-outline-dark">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
             <a href="<?php echo site_url('pdf/generate') ?>">
                 Download PDF
             </a>

@@ -60,32 +60,47 @@
             <div class="menu-card">
                 <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
                 <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <p class="menu-card-price">Perpaduan Bubuk Matcha Dengan Susu</p>
             </div>
-            <div class="menu-card pt-3">
+            <div class="menu-card pt-3 px-3">
                 <img src="img/taro1.jpeg" alt="Matcha" class="menu-card-img">
-                <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <h3 class="menu-card-title">- Taro-</h3>
+                <p class="menu-card-price">Perpaduan Bubuk Taro Dengan Susu</p>
             </div>
             <div class="menu-card">
                 <img src="img/redvelvet.jpeg" alt="Matcha" class="menu-card-img">
-                <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <h3 class="menu-card-title">- Red Velvet-</h3>
+                <p class="menu-card-price">Perpaduan Bubuk RedVelvet Dengan Susu</p>
             </div>
             <div class="menu-card">
-                <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
-                <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/blueocean.png" alt="Matcha" class="menu-card-img" style="width: 13.4rem;">
+                <h3 class="menu-card-title">- Blue Ocean-</h3>
+                <p class="menu-card-price">Perpaduan Soda Dengan Sirup Blue Ocean</p>
+            </div>
+            <div class="menu-card pt-4 px-3">
+                <img src="img/motasuren2.png" alt="Matcha" class="menu-card-img" style="width: 12.5rem;">
+                <h3 class=" menu-card-title">- Mota Suren-</h3>
+                <p class="menu-card-price">Perpaduan Susu Dengan Gula Aren</p>
+            </div>
+            <div class="menu-card pt-4">
+                <img src="img/coklat.png" alt="Matcha" class="menu-card-img" style="width: 12.5rem;">
+                <h3 class=" menu-card-title">- Coklat-</h3>
+                <p class="menu-card-price">Perpanduan Bubuk Coklat Dengan Susu</p>
+            </div>
+            <div class="menu-card ">
+                <img src="img/vanilla.png" alt="Matcha" class="menu-card-img" style="width: 12.5rem;">
+                <h3 class=" menu-card-title">- Vanilla-</h3>
+                <p class="menu-card-price">Perpanduan Bubuk Coklat Dengan Susu</p>
+            </div>
+            <div class="menu-card pt-5 px-3">
+                <img src="img/caramel.png" alt="Matcha" class="menu-card-img" style="width: 23.5rem;">
+                <h3 class=" menu-card-title">- Caramel-</h3>
+                <p class="menu-card-price">Perpanduan Bubuk Coklat Dengan Susu</p>
             </div>
             <div class="menu-card">
-                <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
-                <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
-            </div>
-            <div class="menu-card">
-                <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
-                <h3 class="menu-card-title">- Matcha Milk-</h3>
-                <p class="menu-card-price">IDR 15K</p>
+                <img src="img/hazelnut.png" alt="Matcha" class="menu-card-img" style="width: 12.5rem;">
+                <h3 class=" menu-card-title">- Hazelnut-</h3>
+                <p class="menu-card-price">Perpanduan Bubuk Coklat Dengan Susu</p>
             </div>
         </div>
     </div>

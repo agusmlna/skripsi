@@ -70,7 +70,9 @@ $routes->get('/admin/order', 'Order2::index');
 $routes->get('/admin/order/detail/(:any)', 'Order2::detail/$1');
 $routes->get('/admin/order/sukses/(:any)', 'Order2::sukses/$1');
 $routes->get('/admin/order/laporanpenjualan', 'Order2::laporanpenjualan');
+$routes->post('/admin/order/laporanpenjualan', 'Order2::filterandstatus');
 $routes->get('/admin/order/laporanpembayaran', 'Order2::laporanpembayaran');
+$routes->post('/admin/order/laporanpembayaran', 'Order2::filterandstatus');
 $routes->post('/admin/order/save/(:any)', 'Order2::savePayment/$1');
 $routes->post('/admin/order', 'Order2::filter');
 
