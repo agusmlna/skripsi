@@ -5,11 +5,11 @@
     <div class="row">
         <h1 class="text-center">Promo</h1>
         <div class="col">
-            <div class="cardbg-transparent" style="width: 30rem;">
+            <div class="cardbg-transparent" style="width: 25rem;">
                 <img src="/img/promo.jpg" class="card-img-top rounded" alt="...">
                 <div class="card-body">
-                    <h5 class="card-text py-3 fw-bold">Promo Soft Opening Beli Mota Suren 2 , Gratis Kentang Goreng!</h5>
-                    <p class="text-muted">Berlaku Hingga 11 Mei s/d 21 Mei</p>
+                    <h5 class="card-text py-3 fw-bold">Promo Kemerdekaan Beli 2 Motasuren Gratis Kentang Goreng!!</h5>
+                    <p class="text-muted">Berlaku Hingga 17 Mei s/d 17 Agustus</p>
                 </div>
             </div>
         </div>
