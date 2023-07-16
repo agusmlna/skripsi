@@ -146,7 +146,7 @@
                     <div class="row mb-3">
                         <label for="nama-bahan" class="col-sm-2 col-form-label">bahan baku</label>
                         <div class="dropdown col-sm-10">
-                            <button class="btn btn-secondary dropdown-toggle dropdown-text-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle dropdown-text-4" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 nama bahan baku
                             </button>
                             <ul class="dropdown-menu">
@@ -175,7 +175,7 @@
                     <div class="row mb-3">
                         <label for="nama-bahan" class="col-sm-2 col-form-label">bahan baku</label>
                         <div class="dropdown col-sm-10">
-                            <button class="btn btn-secondary dropdown-toggle dropdown-text-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button class="btn btn-secondary dropdown-toggle dropdown-text-5" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 nama bahan baku
                             </button>
                             <ul class="dropdown-menu">
