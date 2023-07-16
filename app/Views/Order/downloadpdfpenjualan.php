@@ -27,10 +27,6 @@
             </tr>
         </thead>
         <tbody>
-            <?php
-            $quantityTotal = 0;
-            $totalProduk = 0;
-            ?>
             <?php $i = 1; ?>
             <?php foreach ($orders as $o) : ?>
                 <tr>
@@ -45,7 +41,6 @@
                     <td>
                         <?php foreach (json_decode($o['order_menu']) as $m) : ?>
                             <?= $m->quantity; ?>
-                            <?php $quantityTotal += $m->quantity; ?>
                             <br>
                         <?php endforeach; ?>
                     </td>
@@ -56,14 +51,13 @@
                         <?php endforeach; ?>
                     </td>
                     <td><?= $o['total']; ?></td>
-                    <?php $totalProduk +=  $o['total']; ?>
                     <td><?= date('d/m/Y', strtotime($o['order_date'])) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
         <tfoot class="table-dark">
             <td colspan="5">Jumlah</td>
-            <td><?= $totalProduk; ?></td>
+            <td><?= $o['customer_name']; ?></td>
         </tfoot>
     </table>
 
