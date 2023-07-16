@@ -60,13 +60,11 @@ $("#datepicker")
     // hapus semua disabled pada input meja
     // laru lakukan pengecekan tanggal input dengan tanggal reservasi
     removeDisabledInputMeja();
-    removeDisabledInputJam();
     for (const r of reservasi) {
       let date2 = new Date(r["tanggal"]).getTime();
       if (compareDate(date1, date2)) {
         console.log("sama");
         disabledInputMeja(r);
-        disabledInputJam(r);
       }
     }
   });

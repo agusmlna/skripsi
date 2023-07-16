@@ -5,6 +5,11 @@
     <div class="row">
         <div class="col">
             <h1 class="my-1"> Daftar Data Reservasi</h1>
+            <?php if (session()->getFlashdata('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->getFlashdata('pesan'); ?>
+                </div>
+            <?php endif; ?>
             <div class="container py-3 my-3 border">
                 <div class="row">
                     <div class="col">
@@ -89,7 +94,7 @@
                             <?php endif; ?>
                             <td>
                                 <a href="/admin/reservasi/sukses/<?= $r['id']; ?>" class="btn btn-success"><i class="fa-solid fa-check"></i></a>
-                                <a href="/admin/order/detail/" class="btn btn-danger"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a>
+                                <a href="/admin/reservasi/delete/<?= $r['id']; ?>" class="btn btn-danger"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

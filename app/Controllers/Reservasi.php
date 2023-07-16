@@ -45,6 +45,13 @@ class Reservasi extends BaseController
         return redirect()->to('admin/reservasi');
     }
 
+    public function delete($id)
+    {
+        $this->reservasiModel->delete($id);
+        session()->setFlashdata('pesan', 'Reservasi Selesai.');
+        return redirect()->to('/admin/reservasi');
+    }
+
     public function filter()
     {
         $firstDate = date("Y-m-d H:i:s", strtotime($this->request->getVar('tanggal-1')));
