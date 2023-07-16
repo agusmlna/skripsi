@@ -28,7 +28,13 @@
                                     <td><?= $r['no_meja']; ?></td>
                                     <td><?= $r['tanggal']; ?></td>
                                     <td><?= $r['jam']; ?></td>
-                                    <td><span class="badge text-bg-danger"><?= $r['status']; ?></span></td>
+                                    <?php if ($r['status'] == 'Sukses') : ?>
+                                        <td><span class="badge text-bg-success"><?= $r['status']; ?></td>
+                                    <?php elseif ($r['status'] == 'Di Proses') : ?>
+                                        <td><span class="badge text-bg-primary"><?= $r['status']; ?></td>
+                                    <?php else : ?>
+                                        <td><span class="badge text-bg-danger"><?= $r['status']; ?></td>
+                                    <?php endif; ?>
                                 </tr>
                             </tbody>
                         </table>

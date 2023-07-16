@@ -27,7 +27,7 @@
                     <?php foreach (json_decode($order['order_menu']) as $o) : ?>
                         <div class="row justify-content-center">
                             <p class="col-3"><?= $o->menu; ?></p>
-                            <p class="col-2"><?= $o->quantity; ?></p>
+                            <p class="col-2">x <?= $o->quantity; ?></p>
                             <div class="col-3 text-end">
                                 <p>Rp. <?= $o->price ?></p>
                             </div>

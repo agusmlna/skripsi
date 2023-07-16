@@ -140,6 +140,64 @@
                             <input type="text" class="form-control" id="quantity-3" name="quantity-3">
                         </div>
                     </div>
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+                    <div class="row mb-3">
+                        <label for="nama-bahan" class="col-sm-2 col-form-label">bahan baku</label>
+                        <div class="dropdown col-sm-10">
+                            <button class="btn btn-secondary dropdown-toggle dropdown-text-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                nama bahan baku
+                            </button>
+                            <ul class="dropdown-menu">
+                                <?php $index = 0; ?>
+                                <?php foreach ($bahanBaku as $b) : ?>
+                                    <?php $index++; ?>
+                                    <li class="item-4"><a class="dropdown-item" href="#"><?= $b['name']; ?>
+                                        </a>
+                                        <div id="item-id-<?= $index; ?>" class="d-none"><?= $b['id']; ?></div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <input type='hidden' id='id-4' name="id-bahan-4" value='' />
+                        <input type='hidden' id='name-4' name="nama-bahan-4" value='' />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="quantity-4" class="col-sm-2 col-form-label">quantity</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="quantity-4" name="quantity-4">
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <!--  -->
+                    <div class="row mb-3">
+                        <label for="nama-bahan" class="col-sm-2 col-form-label">bahan baku</label>
+                        <div class="dropdown col-sm-10">
+                            <button class="btn btn-secondary dropdown-toggle dropdown-text-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                nama bahan baku
+                            </button>
+                            <ul class="dropdown-menu">
+                                <?php $index = 0; ?>
+                                <?php foreach ($bahanBaku as $b) : ?>
+                                    <?php $index++; ?>
+                                    <li class="item-5"><a class="dropdown-item" href="#"><?= $b['name']; ?>
+                                        </a>
+                                        <div id="item-id-<?= $index; ?>" class="d-none"><?= $b['id']; ?></div>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                        <input type='hidden' id='id-5' name="id-bahan-5" value='' />
+                        <input type='hidden' id='name-5' name="nama-bahan-5" value='' />
+                    </div>
+                    <div class="row mb-3">
+                        <label for="quantity-5" class="col-sm-2 col-form-label">quantity</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="quantity-5" name="quantity-5">
+                        </div>
+                    </div>
                 </div>
                 <!-- end resep -->
 
