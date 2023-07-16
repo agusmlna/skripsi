@@ -17,6 +17,7 @@ let buttonDec = document.querySelector(".button-dec");
 // stok bahan
 let docStokBahan = document.querySelector(".stok-bahan").textContent;
 let stokBahan = JSON.parse(docStokBahan);
+const inputStok = document.querySelector(".input-stok");
 
 let recipes = document.querySelectorAll(".recipe");
 
@@ -67,6 +68,7 @@ function checkStock(isChangeStock = false, dataOrder, id) {
       textPesan[i].innerText = "Pesan";
     }
   }
+  inputStok.value = JSON.stringify(stokBahan);
 }
 checkStock();
 
