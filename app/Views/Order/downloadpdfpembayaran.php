@@ -55,10 +55,11 @@
                         <?php endforeach; ?>
                     </td>
                     <td><?= $o['total']; ?></td>
+                    <?php $totalSemua += $o['total']; ?>
+                    <td><?= $o['type_payment']; ?></td>
+                    <td><?= date('d/m/Y', strtotime($o['order_date'])) ?></td>
                     <td><?= $o['bayar']; ?></td>
                     <td><?= $o['kembalian']; ?></td>
-                    <?php $totalSemua += $o['total']; ?>
-                    <td><?= date('d/m/Y', strtotime($o['order_date'])) ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
