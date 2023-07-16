@@ -8,6 +8,11 @@ $rating2 = 0;
 $rating3 = 0;
 $rating4 = 0;
 $rating5 = 0;
+$average1 = 0;
+$average2 = 0;
+$average3 = 0;
+$average4 = 0;
+$average5 = 0;
 
 foreach ($rating as $r) {
     switch ($r['rating']) {
@@ -31,11 +36,14 @@ foreach ($rating as $r) {
 
 $totalRating = count($rating);
 
-$average1 = ($rating1 / $totalRating) * 100;
-$average2 = ($rating2 / $totalRating) * 100;
-$average3 = ($rating3 / $totalRating) * 100;
-$average4 = ($rating4 / $totalRating) * 100;
-$average5 = ($rating5 / $totalRating) * 100;
+if ($totalRating != 0) {
+    $average1 = ($rating1 / $totalRating) * 100;
+    $average2 = ($rating2 / $totalRating) * 100;
+    $average3 = ($rating3 / $totalRating) * 100;
+    $average4 = ($rating4 / $totalRating) * 100;
+    $average5 = ($rating5 / $totalRating) * 100;
+}
+
 
 
 ?>
