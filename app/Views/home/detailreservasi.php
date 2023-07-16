@@ -16,6 +16,7 @@
                                     <th scope="col">No Telepon</th>
                                     <th scope="col">No Meja</th>
                                     <th scope="col">tanggal</th>
+                                    <th scope="col">jam</th>
                                     <th scope="col">Status</th>
                                 </tr>
                             </thead>
@@ -26,6 +27,7 @@
                                     <td><?= $r['no_telpon']; ?></td>
                                     <td><?= $r['no_meja']; ?></td>
                                     <td><?= $r['tanggal']; ?></td>
+                                    <td><?= $r['jam']; ?></td>
                                     <td><span class="badge text-bg-danger"><?= $r['status']; ?></span></td>
                                 </tr>
                             </tbody>
@@ -39,7 +41,7 @@
                             </h4>
 
                             <div class="d-flex align-items-center shadow-sm rounded-3 p-2 mb-xl-0 mb-3">
-                                <form action="/home/detailtransaksi/delete/<?= $r['id']; ?>" method="delete" class="d-inline">
+                                <form action="/home/detailreservasi/delete/<?= $r['id']; ?>" method="delete" class="d-inline">
                                     <?= csrf_field(); ?>
                                     <input type="hidden" name="_methode" value="DELETE">
                                     <button type="submit" class="fs-4 btn btn-danger rounded-3 mx-2" onclick="return confirm('apakah anda yakin?');">Delete</button>

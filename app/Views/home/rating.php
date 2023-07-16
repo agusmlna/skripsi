@@ -41,7 +41,7 @@ $average5 = ($rating5 / $totalRating) * 100;
 
 
 <div class="container pt-5 mt-5">
-    <div class="row">
+    <div class="row justify-content-center">
         <div class="col-sm-4 progressSection">
             <div class='holder'>
                 <div>
@@ -120,9 +120,6 @@ $average5 = ($rating5 / $totalRating) * 100;
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 text-center m-auto">
-            <button class="btn-primary" id='add_review'> Add Review </button>
         </div>
     </div>
 

@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\KedaiModel;
 use App\Models\UserModel;
 use App\Models\AdminModel;
 
@@ -32,6 +31,7 @@ class SignController extends BaseController
         {
             $ses_data = [
                 'iduser' => $data['id_user'],
+                'username' => $data['username'],
             ];
             session()->set($ses_data);
         }

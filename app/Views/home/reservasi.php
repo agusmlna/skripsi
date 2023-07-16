@@ -27,19 +27,6 @@
                     <label for="no_telpon" class="form-label">No Telpon</label>
                     <input type="text" class="form-control" id="inputTelpon" name="no_telpon">
                 </div>
-                <div class="col-md-6">
-                    <label for="meja" class="form-label">Pilih Meja</label>
-                    <select id="inputMeja" class="form-select" aria-label="Default select example">
-                        <option selected>Silahkan Pilih Meja</option>
-                        <option value="one">One</option>
-                        <option value="two">Two</option>
-                        <option value="three">Three</option>
-                        <option value="four">Four</option>
-                        <option value="five">Five</option>
-                        <option value="six">Six</option>
-                    </select>
-                    <input type='hidden' id='meja' name="meja" value='' />
-                </div>
                 <section class="container">
                     <h2 class="py-2">Pilih Tanggal</h2>
                     <div class="row">
@@ -56,7 +43,29 @@
                         </div>
                     </div>
                 </section>
-
+                <div class="col-md-6">
+                    <label for="jam" class="form-label">Jam</label>
+                    <select id="inputJam" class="form-select" aria-label="Default select example">
+                        <option selected>Silahkan Pilih Jam</option>
+                        <option value="19.00">19.00</option>
+                        <option value="20.00">20.00</option>
+                        <option value="21.00">21.00</option>
+                    </select>
+                    <input type='hidden' id='jam' name="jam" value='' />
+                </div>
+                <div class="col-md-6">
+                    <label for="meja" class="form-label">Pilih Meja</label>
+                    <select id="inputMeja" class="form-select" aria-label="Default select example">
+                        <option selected>Silahkan Pilih Meja</option>
+                        <option value="one">One</option>
+                        <option value="two">Two</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <option value="five">Five</option>
+                        <option value="six">Six</option>
+                    </select>
+                    <input type='hidden' id='meja' name="meja" value='' />
+                </div>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary btn-confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Booking
@@ -84,6 +93,8 @@
                                 <p class="modal-meja">Six</p>
                                 <h5>Tanggal : </h5>
                                 <p class="modal-tanggal">29/05/2023</p>
+                                <h5>Jam : </h5>
+                                <p class="modal-jam">19.00</p>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                     <label class="form-check-label" for="flexCheckDefault">

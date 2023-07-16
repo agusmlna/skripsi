@@ -16,6 +16,7 @@ class ReservasiModel extends Model
         'no_telpon',
         'no_meja',
         'tanggal',
+        'jam',
         'status',
         'created_at'
     ];

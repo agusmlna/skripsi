@@ -32,6 +32,7 @@ class Reservasi extends BaseController
             'no_telpon' => $this->request->getVar('no_telpon'),
             'no_meja' => $this->request->getVar('meja'),
             'status' => 'Di Proses',
+            'jam' => $this->request->getVar('jam'),
             'tanggal' => date('Y/m/d H:i:s', $date)
         ]);
 

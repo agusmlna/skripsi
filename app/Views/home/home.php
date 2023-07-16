@@ -62,13 +62,13 @@
                 <h3 class="menu-card-title">- Matcha Milk-</h3>
                 <p class="menu-card-price">IDR 15K</p>
             </div>
-            <div class="menu-card">
-                <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
+            <div class="menu-card pt-3">
+                <img src="img/taro1.jpeg" alt="Matcha" class="menu-card-img">
                 <h3 class="menu-card-title">- Matcha Milk-</h3>
                 <p class="menu-card-price">IDR 15K</p>
             </div>
             <div class="menu-card">
-                <img src="img/matchamilk.jpg" alt="Matcha" class="menu-card-img">
+                <img src="img/redvelvet.jpeg" alt="Matcha" class="menu-card-img">
                 <h3 class="menu-card-title">- Matcha Milk-</h3>
                 <p class="menu-card-price">IDR 15K</p>
             </div>

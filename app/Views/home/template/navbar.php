@@ -32,7 +32,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-user" style="color: #000000;"></i>
-                            Hallo, Agus
+                            Hallo, <?= session()->username; ?>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
