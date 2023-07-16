@@ -157,7 +157,7 @@ if ($totalRating != 0) {
                 <div>
                     <div class="container pe-4">
                         <div class="row border border-3 rounded-5 px-2 py-2">
-                            <h1>A</h1>
+                            <h1><?= substr($r['name'], 0, 1); ?></h1>
                         </div>
                     </div>
                 </div>
