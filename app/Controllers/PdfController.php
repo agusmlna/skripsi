@@ -52,13 +52,13 @@ class PdfController extends BaseController
         $data = [
             'orders' => $this->orderModel->getOrderByArrayId($ids),
         ];
-        $filename = date('y-m-d-H-i-s') . '-qadr-labs-report';
+        $filename = date('y-m-d-H-i-s') . 'pembayaran';
 
         // instantiate and use the dompdf class
         $dompdf = new Dompdf();
 
         // load HTML content
-        $dompdf->loadHtml(view('Order/downloadpdfpenjualan', $data));
+        $dompdf->loadHtml(view('Order/downloadpdfpembayaran', $data));
 
         // (optional) setup the paper size and orientation
         $dompdf->setPaper('A4', 'potrait');
