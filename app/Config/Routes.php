@@ -96,7 +96,7 @@ $routes->post('/home/reservasi/save', 'Reservasi::save');
 $routes->get('home/promo', 'Promo::index');
 
 $routes->get('home/rating', 'Rating::index');
-$routes->post('home/rating/save', 'Rating::save');
+$routes->post('home/rating/save/(:num)', 'Rating::save/$1');
 
 $routes->get('home/detailtransaksi', 'Detailtransaksi::index');
 $routes->get('home/detailtransaksi/delete/(:num)', 'Detailtransaksi::delete/$1');

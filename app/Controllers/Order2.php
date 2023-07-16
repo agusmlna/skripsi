@@ -23,9 +23,11 @@ class Order2 extends BaseController
 
     public function save()
     {
+        $bayar = 0;
         // data variabel berasal dari input file
         $buktipembayaran = $this->request->getFile('bukti-pembayaran');
         if (file_exists($buktipembayaran)) {
+            $bayar = $this->request->getVar('total');
             // pindahkan ke folder image
             $buktipembayaran->move('img');
             // ambil nama file fotoProduk
@@ -51,6 +53,7 @@ class Order2 extends BaseController
                 'total' => $this->request->getVar('total'),
                 'type_payment' => $this->request->getVar('type-payment'),
                 'buktibayar' => $buktipembayaran,
+                'bayar' => $bayar,
                 'order_date' => $orderDate,
                 'status' => 'Di Proses'
             ]);

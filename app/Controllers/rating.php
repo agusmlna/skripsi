@@ -24,10 +24,10 @@ class Rating extends BaseController
 
 
 
-    public function save()
+    public function save($idOrder)
     {
-
         $this->ratingModel->save([
+            'id_order' => $idOrder,
             'name' => $this->request->getVar('name'),
             'rating' => $this->request->getVar('rating'),
             'pesan' => $this->request->getVar('pesan'),

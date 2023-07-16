@@ -1,4 +1,5 @@
 let meja = document.querySelector("#inputMeja");
+let jam = document.querySelector("#inputJam");
 let formCheck = document.querySelector(".form-check-input");
 let btnSubmit = document.querySelector(".btn-submit");
 
@@ -18,12 +19,31 @@ function disabledInputMeja(reservasi) {
   }
 }
 
+function disabledInputJam(reservasi) {
+  for (const j of jam.children) {
+    if (reservasi["jam"] == j.value) {
+      j.setAttribute("disabled", "");
+      console.log("disabled input jam");
+    }
+  }
+}
+
 function removeDisabledInputMeja() {
   for (const m of meja.children) {
     let dis = m.disabled;
     if (dis != null) {
       m.removeAttribute("disabled");
       console.log("remove disabled input meja");
+    }
+  }
+}
+
+function removeDisabledInputJam() {
+  for (const j of jam.children) {
+    let dis = j.disabled;
+    if (dis != null) {
+      j.removeAttribute("disabled");
+      console.log("remove disabled input jam");
     }
   }
 }
@@ -40,11 +60,13 @@ $("#datepicker")
     // hapus semua disabled pada input meja
     // laru lakukan pengecekan tanggal input dengan tanggal reservasi
     removeDisabledInputMeja();
+    removeDisabledInputJam();
     for (const r of reservasi) {
       let date2 = new Date(r["tanggal"]).getTime();
       if (compareDate(date1, date2)) {
         console.log("sama");
         disabledInputMeja(r);
+        disabledInputJam(r);
       }
     }
   });
@@ -56,6 +78,7 @@ document.querySelector(".btn-confirm").addEventListener("click", function () {
   let inputEmail = document.querySelector("#inputEmail").value;
   let inputTelpon = document.querySelector("#inputTelpon").value;
   let inputMeja = document.querySelector("#inputMeja").value;
+  let inputJam = document.querySelector("#inputJam").value;
   let inputTanggal = document.querySelector("#inputTanggal").value;
 
   // modal
@@ -64,6 +87,7 @@ document.querySelector(".btn-confirm").addEventListener("click", function () {
   let modalEmail = document.querySelector(".modal-email");
   let modalTelpon = document.querySelector(".modal-telpon");
   let modalMeja = document.querySelector(".modal-meja");
+  let modalJam = document.querySelector(".modal-jam");
   let modalTanggal = document.querySelector(".modal-tanggal");
 
   // insert input to modal
@@ -72,11 +96,14 @@ document.querySelector(".btn-confirm").addEventListener("click", function () {
   modalEmail.textContent = inputEmail;
   modalTelpon.textContent = inputTelpon;
   modalMeja.textContent = inputMeja;
+  modalJam.textContent = inputJam;
   modalTanggal.textContent = inputTanggal;
 
   let meja = document.querySelector("#meja");
+  let jam = document.querySelector("#jam");
 
   meja.value = inputMeja;
+  jam.value = inputJam;
 });
 
 // fungsi untuk cek apakah checkbox tercentang
