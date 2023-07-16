@@ -84,7 +84,7 @@
                             <td><?= $r['email']; ?></td>
                             <td><?= $r['no_telpon']; ?></td>
                             <td><?= $r['no_meja']; ?></td>
-                            <td><?= $r['tanggal']; ?></td>
+                            <td><?= date('Y/m/d', strtotime($r['tanggal'])); ?></td>
                             <?php if ($r['status'] == 'Sukses') : ?>
                                 <td><span class="badge text-bg-success"><?= $r['status']; ?></td>
                             <?php elseif ($r['status'] == 'Di Proses') : ?>
