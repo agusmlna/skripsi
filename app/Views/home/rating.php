@@ -37,6 +37,7 @@ $average3 = ($rating3 / $totalRating) * 100;
 $average4 = ($rating4 / $totalRating) * 100;
 $average5 = ($rating5 / $totalRating) * 100;
 
+
 ?>
 
 
@@ -122,6 +123,9 @@ $average5 = ($rating5 / $totalRating) * 100;
             </div>
         </div>
     </div>
+    <!-- <div class="col-sm-4 text-center m-auto">
+        <button class="btn-primary" id='add_review'> Add Review </button>
+    </div> -->
 
     <div id="display_review">
 
@@ -132,6 +136,15 @@ $average5 = ($rating5 / $totalRating) * 100;
         <h2 class="fw-bold text-center">Ulasan</h2>
         <hr>
         <?php foreach ($rating as $r) : ?>
+            <?php
+            $arrOrderMenuName = array();
+            $order = json_decode($r['order_menu']);
+            for ($i = 0; $i < count($order); $i++) {
+                array_push($arrOrderMenuName, $order[$i]->menu);
+            }
+
+            $orderMenu = join(", ", $arrOrderMenuName);
+            ?>
             <div class="d-flex">
                 <div>
                     <div class="container pe-4">
@@ -141,7 +154,9 @@ $average5 = ($rating5 / $totalRating) * 100;
                     </div>
                 </div>
                 <div>
-                    <h6 class="fw-bold nopadding"><?= $r['name']; ?></h6>
+                    <h6 class="fw-bold nopadding"><?= $r['name']; ?>
+                        <span class="text-secondary"><?= $orderMenu; ?></span>
+                    </h6>
                     <div class="d-flex fs-6" style="color: #FFB813;">
                         <?php for ($i = 0; $i < 5; $i++) : ?>
                             <?php if ($i < $r['rating']) : ?>
@@ -161,45 +176,5 @@ $average5 = ($rating5 / $totalRating) * 100;
     </div>
 </div>
 
-<div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
 
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <h4 class="modal-title text-dark">Write your Review</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <form action="/home/rating/save" method="post">
-                <!-- Modal body -->
-                <div class="modal-body text-center">
-                    <h4>
-                        <input type="radio" value="1" name="rating" id='input_star_1' class="d-none" />
-                        <input type="radio" value="2" name="rating" id='input_star_2' class="d-none" />
-                        <input type="radio" value="3" name="rating" id='input_star_3' class="d-none" />
-                        <input type="radio" value="4" name="rating" id='input_star_4' class="d-none" />
-                        <input type="radio" value="5" name="rating" id='input_star_5' class="d-none" />
-
-                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_1" id='submit_star_1' data-rating='1'></label>
-                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_2" id='submit_star_2' data-rating='2'></label>
-                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_3" id='submit_star_3' data-rating='3'></label>
-                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_4" id='submit_star_4' data-rating='4'></label>
-                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_5" id='submit_star_5' data-rating='5'></label>
-                    </h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id='userName' name='name' placeholder="Enter Name">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="pesan" id="userMessage" class="form-control" placeholder="Enter message"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn-primary" id='sendReview'>Submit</button>
-                    </div>
-                </div>
-            </form>
-
-            <hr>
-        </div>
-    </div>
-
-    <?= $this->endSection(); ?>
+<?= $this->endSection(); ?>

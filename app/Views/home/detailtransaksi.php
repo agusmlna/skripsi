@@ -50,52 +50,8 @@
                             </h4>
 
                             <div class="col-sm-4 text-center m-auto">
-                                <button class="btn-primary" id='add_review'> Add Review </button>
+                                <button class="btn-primary" id='add_review' onclick="returnToModal(<?= $o['id']; ?>)" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"> Add Review </button>
                             </div>
-
-
-                            <div class="modal" id="myModal">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-
-                                        <!-- Modal Header -->
-                                        <div class="modal-header">
-                                            <h4 class="modal-title text-dark">Write your Review</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <form action="/home/rating/save" method="post">
-                                            <!-- Modal body -->
-                                            <div class="modal-body text-center">
-                                                <h4>
-                                                    <input type="radio" value="1" name="rating" id='input_star_1' class="d-none" />
-                                                    <input type="radio" value="2" name="rating" id='input_star_2' class="d-none" />
-                                                    <input type="radio" value="3" name="rating" id='input_star_3' class="d-none" />
-                                                    <input type="radio" value="4" name="rating" id='input_star_4' class="d-none" />
-                                                    <input type="radio" value="5" name="rating" id='input_star_5' class="d-none" />
-
-                                                    <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_1" id='submit_star_1' data-rating='1'></label>
-                                                    <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_2" id='submit_star_2' data-rating='2'></label>
-                                                    <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_3" id='submit_star_3' data-rating='3'></label>
-                                                    <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_4" id='submit_star_4' data-rating='4'></label>
-                                                    <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_5" id='submit_star_5' data-rating='5'></label>
-                                                </h4>
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id='userName' name='name' placeholder="Enter Name">
-                                                </div>
-                                                <div class="form-group">
-                                                    <textarea name="pesan" id="userMessage" class="form-control" placeholder="Enter message"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <button class="btn-primary" id='sendReview'>Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
-
-                                        <hr>
-                                    </div>
-                                </div>
-                            </div>
-
 
                             <div class="d-flex align-items-center shadow-sm rounded-3 p-2 mb-xl-0 mb-3">
                                 <form action="/home/detailtransaksi/delete/<?= $o['id']; ?>" method="delete" class="d-inline">
@@ -111,5 +67,46 @@
         </div>
     </div>
 </div>
-<!-- END OF ADS 
+
+<form onsubmit='return submitRating(this)' method="post" action="">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title text-dark">Write your Review</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+                    <h4>
+                        <input type="radio" value="1" name="rating" id='input_star_1' class="d-none" />
+                        <input type="radio" value="2" name="rating" id='input_star_2' class="d-none" />
+                        <input type="radio" value="3" name="rating" id='input_star_3' class="d-none" />
+                        <input type="radio" value="4" name="rating" id='input_star_4' class="d-none" />
+                        <input type="radio" value="5" name="rating" id='input_star_5' class="d-none" />
+
+                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_1" id='submit_star_1' data-rating='1'></label>
+                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_2" id='submit_star_2' data-rating='2'></label>
+                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_3" id='submit_star_3' data-rating='3'></label>
+                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_4" id='submit_star_4' data-rating='4'></label>
+                        <label class="fa fa-star star-light submit_star  mr-1 " for="input_star_5" id='submit_star_5' data-rating='5'></label>
+                    </h4>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id='userName' name='name' placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="pesan" id="userMessage" class="form-control" placeholder="Enter message"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn-primary" id='' type="submit">Submit</button>
+                    </div>
+                </div>
+
+                <hr>
+            </div>
+        </div>
+    </div>
+</form>
 <?= $this->endSection(); ?>
