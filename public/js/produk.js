@@ -69,6 +69,7 @@ function checkStock(isChangeStock = false, dataOrder, id) {
     }
   }
   inputStok.value = JSON.stringify(stokBahan);
+  console.log(stokBahan);
 }
 checkStock();
 

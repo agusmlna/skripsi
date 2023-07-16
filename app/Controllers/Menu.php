@@ -73,14 +73,20 @@ class Menu extends BaseController
         $idBahan1 = $this->request->getVar('id-bahan-1');
         $idBahan2 = $this->request->getVar('id-bahan-2');
         $idBahan3 = $this->request->getVar('id-bahan-3');
+        $idBahan4 = $this->request->getVar('id-bahan-4');
+        $idBahan5 = $this->request->getVar('id-bahan-5');
 
         $namaBahan1 = $this->request->getVar('nama-bahan-1');
         $namaBahan2 = $this->request->getVar('nama-bahan-2');
         $namaBahan3 = $this->request->getVar('nama-bahan-3');
+        $namaBahan4 = $this->request->getVar('nama-bahan-4');
+        $namaBahan5 = $this->request->getVar('nama-bahan-5');
 
         $quantity1 = $this->request->getVar('quantity-1');
         $quantity2 = $this->request->getVar('quantity-2');
         $quantity3 = $this->request->getVar('quantity-3');
+        $quantity4 = $this->request->getVar('quantity-4');
+        $quantity5 = $this->request->getVar('quantity-5');
 
         // $arr = array(
         //     array(
@@ -123,6 +129,22 @@ class Menu extends BaseController
                 'id_bahan' => intval($idBahan3),
                 'name' => $namaBahan3,
                 'quantity' => intval($quantity3),
+            );
+            array_push($arr, $data);
+        }
+        if ($idBahan4 != '') {
+            $data = array(
+                'id_bahan' => intval($idBahan4),
+                'name' => $namaBahan4,
+                'quantity' => intval($quantity4),
+            );
+            array_push($arr, $data);
+        }
+        if ($idBahan5 != '') {
+            $data = array(
+                'id_bahan' => intval($idBahan5),
+                'name' => $namaBahan5,
+                'quantity' => intval($quantity5),
             );
             array_push($arr, $data);
         }
