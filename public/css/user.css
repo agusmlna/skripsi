@@ -159,7 +159,7 @@ a:active {
   display: none;
 }
 
-.container .popup-image span{
+ .popup-image span{
   position: absolute;
   top: 0; right: 10px;
   font-size: 60px;
