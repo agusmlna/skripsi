@@ -125,12 +125,12 @@
 
     <h1 class="text-center fw-bold">IMAGE GALLERY</h1>
     <div class="image-container">
-        <div class="image"><img src="img/liyue_1.png" alt=""></div>
-        <div class="image"><img src="img/liyue_2.png" alt=""></div>
-        <div class="image"><img src="img/liyue_3.png" alt=""></div>
-        <div class="image"><img src="img/liyue_4.png" alt=""></div>
-        <div class="image"><img src="img/liyue_5.png" alt=""></div>
-        <div class="image"><img src="img/liyue_6.png" alt=""></div>
+        <div class="image"><img src="img/moment1jpg.jpg" alt=""></div>
+        <div class="image"><img src="img/moment2.jpg" alt=""></div>
+        <div class="image"><img src="img/moment3.jpg" alt=""></div>
+        <div class="image"><img src="img/moment4.jpg" alt=""></div>
+        <div class="image"><img src="img/moment5.jpg" alt=""></div>
+        <div class="image"><img src="img/moment6.jpg" alt=""></div>
     </div>
 
     <div class="popup-image">
@@ -139,18 +139,6 @@
     </div>
 </div>
 
-<script>
-    document.querySelectorAll('.image-container img').forEach(image => {
-        image.onclick = () => {
-            document.querySelector('.popup-image').style.display = 'block';
-            document.querySelector('.popup-image img').src = image.getAttribute('src');
-        }
-    });
-
-    document.querySelector('popup-image span').onclick = () => {
-        document.querySelector('.popup-image').style.display = 'none';
-    }
-</script>
 
 <div class="container">
     <div class="row py-5">

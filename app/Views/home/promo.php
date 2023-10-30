@@ -31,7 +31,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Kopi Susu Gula Aren</h5>
                     <p class="card-text">Tips membuat kopi dirumah dengan alat french press..</p>
-                    <a href="https://hellosehat.com/nutrisi/resep-sehat/resep-kopi-gula-aren/" class="btn btn-primary">Selengkapnya</a>
+                    <a href="https://hellosehat.com/nutrisi/resep-sehat/resep-kopi-gula-aren/" class="btn btn-primary" target="_blank">Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Resep Mocktail</h5>
                     <p class="card-text">Berbagai Jenis resep mocktail....</p>
-                    <a href="https://cookpad.com/id/cari/minuman%20mocktail%20sprite" class="btn btn-primary">Lihat Selengkapnya</a>
+                    <a href="https://cookpad.com/id/cari/minuman%20mocktail%20sprite" class="btn btn-primary" target="_blank">Lihat Selengkapnya</a>
                 </div>
             </div>
         </div>

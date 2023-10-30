@@ -43,6 +43,9 @@ $routes->post('/prosesregist', 'SignController::processRegist');
 
 $routes->get('/logout', 'SignController::logout');
 
+$routes->get('/pemilik', 'Pemilik::index');
+$routes->post('/pemilik', 'Pemilik::filterandstatus');
+
 $routes->get('/admin', 'Dashboard::index');
 $routes->get('/admin/menu', 'Menu::index');
 $routes->get('/menu/detail/(:any)', 'Menu::detail/$1');

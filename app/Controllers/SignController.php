@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\UserModel;
 use App\Models\AdminModel;
+use App\Models\PemilikModel;
 
 class SignController extends BaseController
 {
@@ -22,6 +23,7 @@ class SignController extends BaseController
     {
         $userModel = new UserModel();
         $adminModel = new AdminModel();
+        $pemilikModel = new PemilikModel();
         //get data from form
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
@@ -44,7 +46,18 @@ class SignController extends BaseController
             ];
             session()->set($ses_data);
         }
-        //check if email exist
+
+        function loginSuccessPemilik($data)
+        {
+            $ses_data = [
+                'idpemilik' => $data['id_pemilik'],
+                'email' => $data['email'],
+            ];
+            session()->set($ses_data);
+        }
+
+
+        //check if email user exist
         if ($data) {
             //check if password is correct
             $pass = $data['password'];
@@ -69,8 +82,18 @@ class SignController extends BaseController
                     return redirect()->to('/login');
                 }
             } else {
-                session()->setFlashdata('pesan', 'Login Gagal');
-                return redirect()->to('/login');
+                $data = $pemilikModel->where('email', $email)->first();
+                if ($data) {
+                    $pass = $data['password'];
+                    if ($password == $pass) {
+                        // dd('sucess');
+                        loginSuccessPemilik($data);
+                        return redirect()->to('/pemilik');
+                    } else {
+                        session()->setFlashdata('pesan', 'Login Gagal');
+                        return redirect()->to('/login');
+                    }
+                }
             }
         }
     }

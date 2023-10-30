@@ -8,7 +8,7 @@
             <?php foreach ($orders as $o) : ?>
                 <div class="container mt-4 py-3 px-3 border border-3 rounded-2" style=" padding: 15px; background-color: rgba (61,77,66,22); box-shadow: 5px 5px 5px lightblue; ">
                     <div class="row">
-                        <table class="table table-borderless text-white">
+                        <table class="table table-borderless text-dark">
                             <thead>
                                 <tr>
                                     <th scope="col">No Pesanan</th>
@@ -33,7 +33,7 @@
                                     <?php if ($o['status'] == 'Sukses') : ?>
                                         <td><span class="badge text-bg-success"><?= $o['status']; ?></td>
                                     <?php elseif ($o['status'] == 'Di Proses') : ?>
-                                        <td><span class="badge text-bg-primary"><?= $o['status']; ?></td>
+                                        <td><span class="badge text-bg-success"><?= $o['status']; ?></td>
                                     <?php else : ?>
                                         <td><span class="badge text-bg-danger"><?= $o['status']; ?></td>
                                     <?php endif; ?>
@@ -52,14 +52,18 @@
                             <div class="col-sm-4 text-center m-auto">
                                 <button class="btn-primary" id='add_review' onclick="returnToModal(<?= $o['id']; ?>)" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button"> Add Review </button>
                             </div>
+                            <?php if (strtotime("{$o['order_date']} + 5 minute") >= strtotime(date("Y-m-d H:i:s"))) : ?>
+                                <div class="d-flex align-items-center shadow-sm rounded-3 p-2 mb-xl-0 mb-3">
 
-                            <div class="d-flex align-items-center shadow-sm rounded-3 p-2 mb-xl-0 mb-3">
-                                <form action="/home/detailtransaksi/delete/<?= $o['id']; ?>" method="delete" class="d-inline">
-                                    <?= csrf_field(); ?>
-                                    <input type="hidden" name="_methode" value="DELETE">
-                                    <button type="submit" class="fs-4 btn btn-danger rounded-3 mx-2" onclick="return confirm('apakah anda yakin?');">Delete</button>
-                                </form>
-                            </div>
+                                    <form action="/home/detailtransaksi/delete/<?= $o['id']; ?>" method="delete" class="d-inline button-delete">
+                                        <?= csrf_field(); ?>
+                                        <div class="d-none"><?= $o['order_date']; ?></div>
+                                        <input type="hidden" name="_methode" value="DELETE">
+                                        <button type="submit" class="fs-4 btn btn-danger rounded-3 mx-2" onclick="return confirm('apakah anda yakin?');">Delete</button>
+                                    </form>
+                                </div>
+
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
